@@ -1,3 +1,12 @@
+---
+title: "AI Greenhouse Event Page"
+programme: "AI Greenhouse"
+organisation: "SHC Tech Club"
+timezone: "Asia/Hong_Kong (UTC+08:00)"
+last_updated: "2026-09-24T00:20:00+08:00"
+updated_by: "Carson Ching"
+---
+
 # AI Greenhouse Event Page
 
 A responsive, standalone static website for SHC Tech Club. No installation, build step, external fonts, or third-party scripts are required.
@@ -19,7 +28,7 @@ Forms have not been created or connected. Until their URLs are added, the two fo
 
 When forms open, add their links to `config.js` and update the latest announcement and the FAQ sentence that says the form is coming soon. When each deadline passes, close the external form and update the page/button label; there is no automatic deadline enforcement.
 
-The poster QR code and email link use https://ai-greenhouse.shc-tech-club.workers.dev/. QR assets are saved in the parent project’s `Drafts/Assets/` folder.
+The poster QR code and email link use https://ai-greenhouse.shc-tech-club.workers.dev/. QR assets are saved in the parent project’s `Drafts/LEARN/QR/` folder.
 
 ## Local Preview
 
