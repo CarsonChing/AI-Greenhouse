@@ -3,7 +3,8 @@
   const config = window.GREENHOUSE_CONFIG || {};
   const actions = [
     ["learn-action", config.learnRegistrationUrl, "Register for LEARN"],
-    ["build-action", config.buildApplicationUrl, "Apply for BUILD"]
+    ["build-action", config.buildApplicationUrl, "Apply for BUILD"],
+    ["share-action", config.shareApplicationUrl, "Apply for SHARE"]
   ];
   for (const [id, url, label] of actions) {
     if (!url) continue;
