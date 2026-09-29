@@ -1,5 +1,5 @@
-// Add the real public form URLs when ready. Empty values show “Coming Soon”.
+// Empty values show “Coming Soon”.
 window.GREENHOUSE_CONFIG = Object.freeze({
-  learnRegistrationUrl: "",
+  learnRegistrationUrl: "https://forms.gle/CYTiiPKEvWUo6w658",
   buildApplicationUrl: ""
 });

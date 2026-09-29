@@ -26,7 +26,7 @@ Published on Cloudflare by Carson. Following the manual restructure, the static 
 - `assets/AI_Greenhouse_Master_Poster.jpg`: master poster displayed at the top of the page.
 - `assets/shun-hing-college-logo.png`: Shun Hing College logo displayed in the page header.
 
-Forms have not been created or connected. Until their URLs are added, the two form buttons are disabled and explicitly say **Coming Soon**. The page collects no participant data. Speaker lineup, support-community arrangements, and SHARE date remain Coming Soon. Public funding amounts and funded-team counts are intentionally omitted for now; the funding eligibility rules are included.
+The LEARN registration form is connected. The BUILD application has not been created or connected, so its button remains disabled and explicitly says **Coming Soon**. The page itself collects no participant data. Speaker lineup, support-community arrangements, and SHARE date remain Coming Soon. Public funding amounts and funded-team counts are intentionally omitted for now; the funding eligibility rules are included.
 
 When forms open, add their links to `config.js` and update the latest announcement and the FAQ sentence that says the form is coming soon. When each deadline passes, close the external form and update the page/button label; there is no automatic deadline enforcement.
 
