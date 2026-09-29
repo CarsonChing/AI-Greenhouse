@@ -2,3 +2,4 @@
 
 .poster{padding-block:56px 64px}.poster h2{font:400 clamp(1.8rem,2.6vw,2.5rem) Georgia,serif;letter-spacing:-.03em;margin:0 0 24px}.poster img{display:block;width:100%;height:auto;border-radius:5px}@media(max-width:760px){.poster{padding-block:42px 48px}.poster h2{margin-bottom:18px}}
 .poster-top{padding-top:32px;padding-bottom:56px}.poster-top img{border-radius:5px}@media(max-width:760px){.poster-top{padding-top:22px;padding-bottom:35px}}
+.brand-logo{display:block;width:auto;height:64px;mix-blend-mode:multiply}@media(max-width:760px){.brand-logo{height:52px}}
