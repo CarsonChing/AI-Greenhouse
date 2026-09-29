@@ -23,6 +23,7 @@ Published on Cloudflare by Carson. Following the manual restructure, the static 
 - `styles.css`: layout and visual styling.
 - `config.js`: the two registration form URLs.
 - `site.js`: activates form links when valid HTTPS URLs are configured.
+- `assets/AI_Greenhouse_Master_Poster.jpg`: master poster displayed at the bottom of the page.
 
 Forms have not been created or connected. Until their URLs are added, the two form buttons are disabled and explicitly say **Coming Soon**. The page collects no participant data. Speaker lineup, support-community arrangements, and SHARE date remain Coming Soon. Public funding amounts and funded-team counts are intentionally omitted for now; the funding eligibility rules are included.
 
