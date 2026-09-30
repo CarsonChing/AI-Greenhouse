@@ -1,4 +1,5 @@
 :root {
+  /* Legacy component colors. Section rules still use these. */
   --ink: #173f31;
   --paper: #fafcf8;
   --soft: #f1f5ed;
@@ -6,23 +7,99 @@
   --sky: #19bede;
   --line: #d8e0d3;
   --muted: #647268;
-  --font: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: var(--ink);
-  background: var(--paper);
-  font-family: var(--font);
+
+  /* Color. Text/fill pairs below meet WCAG AA on bg, surface, and sunken. */
+  --color-bg: #f7f2ea;
+  --color-surface: #fffdf8;
+  --color-surface-sunken: #e9e0d2;
+  --color-text: #1c1612;
+  --color-text-muted: #5c534c;
+  --color-accent: #b8006a;
+  --color-on-accent: #fffdf8;
+  --color-accent-2: #3de4f2;
+  --color-on-accent-2: #062126;
+  --color-accent-2-ink: #0a6570;
+  --color-border: #8c8175;
+  --color-border-strong: #6b5e56;
+  --color-focus: var(--color-accent);
+  --color-success: #166534;
+  --color-warning: #92400e;
+  --color-danger: #9e1b14;
+  --color-info: var(--color-accent-2-ink);
+
+  /* Type. Display and mono are defined for later steps; body is the global face. */
+  --font-display: "Avenir Next Condensed", "Arial Narrow", "Helvetica Neue", "Franklin Gothic Medium", sans-serif;
+  --font-body: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font: var(--font-body);
+  --text-h1: clamp(2.75rem, 6vw, 4.75rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.35rem, 2vw, 1.75rem);
+  --text-h4: 1.125rem;
+  --text-body: 1rem;
+  --text-caption: 0.75rem;
+  --leading-h1: 0.95;
+  --leading-h2: 1.05;
+  --leading-h3: 1.15;
+  --leading-h4: 1.3;
+  --leading-body: 1.6;
+  --leading-caption: 1.4;
+  --tracking-display: -0.04em;
+  --tracking-title: -0.02em;
+  --tracking-body: 0em;
+  --tracking-caption: 0.12em;
+  --tracking-data: 0.06em;
+  --weight-display: 600;
+  --weight-body: 400;
+  --weight-label: 700;
+
+  /* Space, corners, rules. --cut-* is the chamfer length, not a border radius. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --cut-sm: 8px;
+  --cut-md: 14px;
+  --border-hairline: 1px;
+  --border-strong: 2px;
+  --focus-width: 3px;
+  --focus-offset: 4px;
+
+  /* Two shadows and one glow. The glow’s neon is decorative, not a text color. */
+  --shadow-1: 0 1px 0 rgb(28 22 18 / 0.06);
+  --shadow-2: 0 16px 40px rgb(28 22 18 / 0.12);
+  --glow-accent: 0 0 24px rgb(255 46 154 / 0.45);
+
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --duration-slow: 320ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-family: var(--font-body);
   font-synthesis: none;
   scroll-behavior: smooth;
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); }
+body { margin: 0; background: var(--color-bg); color: var(--color-text); }
 a { color: inherit; }
 button { font: inherit; }
 .icon { width: 1.05em; height: 1.05em; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .wrap { width: min(100%, 1440px); margin-inline: auto; padding-inline: clamp(22px, 5vw, 76px); }
 .skip-link { position: absolute; left: 16px; top: -100px; z-index: 20; padding: 10px 14px; background: white; border-radius: 8px; }
 .skip-link:focus { top: 12px; }
-:focus-visible { outline: 3px solid #b76618; outline-offset: 4px; }
+:focus-visible { outline: var(--focus-width) solid var(--color-focus); outline-offset: var(--focus-offset); }
 
 .masthead { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 12px; border-bottom: 1px solid var(--line); }
 .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
@@ -165,6 +242,11 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  :root { scroll-behavior: auto; }
+  :root {
+    scroll-behavior: auto;
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+  }
   .stage-grid { scroll-snap-type: none; }
 }
