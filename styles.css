@@ -178,7 +178,6 @@ nav > a:hover { color: #367357; }
 .updates .eyebrow { color: #dfcff8; }
 .updates h2 { max-width: 720px; font-weight: 700; text-transform: uppercase; }
 .updates p { max-width: 680px; margin: 14px 0 0; color: #e3dce8; line-height: 1.6; }
-.updates .btn { flex: none; }
 
 .register-cta { display: flex; justify-content: center; width: min(100%, 1440px); margin: 0 auto; padding: 8px 22px 26px; }
 .register-cta .btn { min-width: min(100%, 520px); }
@@ -230,7 +229,6 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
   .updates { align-items: stretch; flex-direction: column; gap: 24px; width: auto; margin-inline: 14px; padding: 28px; background-position: 62% center; border-radius: 17px; }
   .updates::after { top: 18px; right: 18px; }
   .updates p { font-size: .88rem; }
-  .updates .btn { width: 100%; }
   footer { flex-direction: column; gap: 24px; padding-block: 34px; }
 }
 
@@ -238,9 +236,9 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
    <a class="btn btn-primary" href="...">Register now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
    <button class="btn btn-secondary" type="button" disabled>Coming soon</button> */
 .btn {
-  --btn-fill: var(--color-accent);
-  --btn-fill-hover: #9c145e;
-  --btn-ink: var(--color-on-accent);
+  --btn-fill: #d6c8f1;
+  --btn-fill-hover: #c4b3ea;
+  --btn-ink: var(--color-text);
   --btn-border: transparent;
   --btn-border-width: 0px;
   position: relative;
@@ -283,9 +281,9 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
   transition: background-color var(--duration-base) var(--ease-out);
 }
 .btn-primary {
-  --btn-fill: var(--color-accent);
-  --btn-fill-hover: #9c145e;
-  --btn-ink: var(--color-on-accent);
+  --btn-fill: #d6c8f1;
+  --btn-fill-hover: #c4b3ea;
+  --btn-ink: var(--color-text);
   --btn-border: transparent;
   --btn-border-width: 0px;
 }
