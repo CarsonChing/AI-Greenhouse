@@ -204,18 +204,51 @@ nav > a.nav-register:hover { color: var(--color-text); }
 .hero-details { display: inline-flex; align-items: center; min-height: 44px; color: var(--banner-ink); font-size: .92rem; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
 .hero-details:hover { color: #ffffff; }
 
+.highlights { width: min(calc(100% - 48px), 1288px); margin: clamp(22px, 3vw, 36px) auto 0; }
+.highlights-panel {
+  position: relative;
+  padding: clamp(22px, 3vw, 36px);
+  background:
+    linear-gradient(var(--color-text), var(--color-text)) left 14px top 14px / 18px 1px no-repeat,
+    linear-gradient(var(--color-text), var(--color-text)) left 14px top 14px / 1px 18px no-repeat,
+    linear-gradient(var(--color-text), var(--color-text)) right 14px top 14px / 18px 1px no-repeat,
+    linear-gradient(var(--color-text), var(--color-text)) right 14px top 14px / 1px 18px no-repeat,
+    linear-gradient(var(--color-text), var(--color-text)) left 14px bottom 14px / 18px 1px no-repeat,
+    linear-gradient(var(--color-text), var(--color-text)) left 14px bottom 14px / 1px 18px no-repeat,
+    linear-gradient(var(--color-text), var(--color-text)) right 14px bottom 14px / 18px 1px no-repeat,
+    linear-gradient(var(--color-text), var(--color-text)) right 14px bottom 14px / 1px 18px no-repeat,
+    var(--color-surface);
+  border: var(--border-hairline) solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+.highlights-head { max-width: 40rem; }
+.highlights .eyebrow { color: var(--color-accent); }
+.highlights h2 { margin: 8px 0 0; font-family: var(--font-display); font-size: var(--text-h2); font-weight: var(--weight-display); line-height: var(--leading-h2); letter-spacing: var(--tracking-title); }
+.highlight-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 22px 0 0; padding: 0; list-style: none; }
+.highlight-list li { display: grid; align-content: start; gap: 8px; min-height: 100%; padding: 16px; background: var(--color-bg); border: var(--border-hairline) solid var(--color-border); }
+.highlight-list span { font-family: var(--font-mono); font-size: var(--text-caption); font-weight: var(--weight-label); letter-spacing: var(--tracking-data); color: var(--color-accent); }
+.highlight-list h3 { margin: 0; font-size: 1.05rem; font-weight: 650; line-height: 1.25; letter-spacing: -0.02em; }
+.highlight-list p { margin: 0; color: var(--color-text-muted); font-size: .9rem; line-height: 1.45; }
+.highlight-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0 0; }
+.highlight-facts div { padding: 14px 16px; background: var(--color-surface-sunken); }
+.highlight-facts dt { font-family: var(--font-mono); font-size: var(--text-caption); font-weight: var(--weight-label); letter-spacing: var(--tracking-caption); text-transform: uppercase; color: var(--color-text-muted); }
+.highlight-facts dd { margin: 6px 0 0; font-size: .95rem; font-weight: 650; line-height: 1.35; }
+.highlight-note { max-width: 46rem; margin: 16px 0 0; color: var(--color-text-muted); font-size: .9rem; line-height: 1.5; }
+.highlights .btn-primary { width: auto; min-width: 11.5rem; margin-top: 18px; }
+
 footer { display: flex; justify-content: space-between; gap: 30px; padding-block: 40px; }
 footer .footer-brand { font-size: 1.3rem; font-weight: 650; text-decoration: none; }
 footer p { margin: 8px 0 0; color: var(--muted); font-size: .8rem; line-height: 1.6; }
 footer .mini-label { display: block; margin-bottom: 10px; }
 footer a { font-size: .88rem; text-underline-offset: 4px; }
 .footer-email { display: inline-flex; align-items: center; gap: 5px; }
-#details, #hero, #programme { scroll-margin-top: 20px; }
+#details, #hero, #highlights, #programme { scroll-margin-top: 20px; }
 
 @media (max-width: 960px) {
   .stage { min-height: 535px; padding: 22px; }
   .stage h2 { font-size: 3.3rem; }
   .details { grid-template-columns: 1fr 1.5fr; gap: 35px; }
+  .highlight-list, .highlight-facts { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 760px) {
@@ -258,6 +291,10 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
   .hero-meta span { display: block; }
   .hero-actions { margin-top: 14px; }
   .hero-actions .btn-primary { width: 100%; }
+  .highlights { width: auto; margin-inline: 14px; }
+  .highlights-panel { padding: 18px 16px 16px; }
+  .highlight-list, .highlight-facts { grid-template-columns: 1fr; }
+  .highlights .btn-primary { width: 100%; }
   footer { flex-direction: column; gap: 24px; padding-block: 34px; }
 }
 
