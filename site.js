@@ -26,4 +26,20 @@
       document.getElementById(id).replaceChildren(link);
     } catch { /* Leave the honest “Coming Soon” state for invalid URLs. */ }
   }
+
+  const detailsButton = document.querySelector(".hero-details");
+  const highlights = document.getElementById("highlights");
+  const highlightsTitle = document.getElementById("highlights-title");
+  if (detailsButton && highlights && highlightsTitle) {
+    detailsButton.addEventListener("click", () => {
+      const open = highlights.hasAttribute("hidden");
+      highlights.toggleAttribute("hidden", !open);
+      detailsButton.setAttribute("aria-expanded", String(open));
+      detailsButton.textContent = open ? "Hide details" : "See details";
+      if (!open) return;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      highlights.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      highlightsTitle.focus();
+    });
+  }
 })();
