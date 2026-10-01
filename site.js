@@ -13,7 +13,7 @@
       if (target.protocol !== "https:") continue;
       const link = document.createElement("a");
       link.href = target.href;
-      link.className = "button registration active";
+      link.className = "btn btn-primary";
       link.append(document.createTextNode(label));
       const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       icon.setAttribute("class", "icon");

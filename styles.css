@@ -114,14 +114,11 @@ nav > a:hover { color: #367357; }
 .registration-menu summary::-webkit-details-marker { display: none; }
 .registration-menu .icon-chevron { transition: transform .18s ease; }
 .registration-menu[open] .icon-chevron { transform: rotate(180deg); }
-.registration-dropdown { position: absolute; z-index: 10; top: calc(100% + 15px); right: 0; width: 260px; padding: 8px; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 45px rgba(23, 63, 49, .14); }
-.registration-dropdown > a, .registration-disabled { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 12px; text-decoration: none; }
-.registration-dropdown > a { border-radius: 9px; }
-.registration-dropdown > a:hover { background: var(--soft); }
-.registration-dropdown strong { font-size: .78rem; letter-spacing: .06em; }
-.registration-dropdown small { display: inline-flex; align-items: center; gap: 5px; font-size: .72rem; text-align: right; }
-.registration-disabled { color: var(--muted); border-top: 1px solid #e9ede6; cursor: not-allowed; }
-.registration-disabled small { font-style: italic; }
+.registration-dropdown { position: absolute; z-index: 10; top: calc(100% + 15px); right: 0; display: grid; gap: 8px; width: 280px; padding: 8px; background: var(--color-surface); border: var(--border-hairline) solid var(--color-border); border-radius: var(--radius-sm); box-shadow: var(--shadow-2); }
+.registration-dropdown .btn { width: 100%; justify-content: space-between; white-space: normal; text-align: left; }
+.registration-dropdown .btn > span { display: grid; gap: 2px; }
+.registration-dropdown .btn strong { font-size: .78rem; letter-spacing: .06em; }
+.registration-dropdown .btn small { font-size: .72rem; font-weight: 500; }
 
 .poster-top { padding-block: clamp(14px, 2vw, 24px) clamp(38px, 5vw, 68px); background: #fafcf8; }
 .poster-link { display: block; border-radius: 14px; }
@@ -157,18 +154,12 @@ nav > a:hover { color: #367357; }
 .stage-note strong { font-size: .82rem; }
 .stage-note span { font-size: .8rem; line-height: 1.5; opacity: .78; }
 .stage-footer { margin-top: auto; padding-top: 30px; }
+.stage-footer .btn { width: 100%; justify-content: space-between; flex-wrap: wrap; white-space: normal; text-align: left; row-gap: 2px; }
+.stage-footer .btn span { font-size: .75rem; font-weight: var(--weight-body); }
 .deadline { margin-bottom: 15px !important; }
 .deadline span { display: block; margin-bottom: 4px; color: var(--muted); font-size: .72rem; font-weight: 600; }
 .share .deadline span { color: #b9c9bf; }
 .deadline strong { font-size: 1rem; }
-
-.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 48px; padding: 13px 17px; border: 1px solid var(--ink); border-radius: 10px; color: var(--ink); background: transparent; font-size: .84rem; font-weight: 650; text-decoration: none; }
-.registration { width: 100%; }
-.registration.active { color: white; background: var(--ink); }
-.registration.active:hover { background: #285b46; }
-.registration:disabled { border-color: #98a497; border-style: dashed; opacity: .75; cursor: not-allowed; }
-.share .registration:disabled { color: #f7faef; border-color: rgba(247, 250, 239, .55); }
-.registration span { font-size: .72rem; font-weight: 500; }
 
 .details { display: grid; grid-template-columns: minmax(220px, .72fr) minmax(0, 1.45fr); gap: clamp(42px, 7vw, 100px); padding-bottom: clamp(64px, 8vw, 105px); }
 .details-intro p { margin: 18px 0 0; color: var(--muted); }
@@ -187,9 +178,10 @@ nav > a:hover { color: #367357; }
 .updates .eyebrow { color: #dfcff8; }
 .updates h2 { max-width: 720px; font-weight: 700; text-transform: uppercase; }
 .updates p { max-width: 680px; margin: 14px 0 0; color: #e3dce8; line-height: 1.6; }
-.update-action { min-width: 170px; color: #25142e; background: #eadfff; border-color: #eadfff; }
-.update-action:hover { color: #25142e; background: #fff; border-color: #fff; }
+.updates .btn { flex: none; }
 
+.register-cta { display: flex; justify-content: center; width: min(100%, 1440px); margin: 0 auto; padding: 8px 22px 26px; }
+.register-cta .btn { min-width: min(100%, 520px); }
 
 footer { display: flex; justify-content: space-between; gap: 30px; padding-block: 40px; }
 footer .footer-brand { font-size: 1.3rem; font-weight: 650; text-decoration: none; }
@@ -238,13 +230,13 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
   .updates { align-items: stretch; flex-direction: column; gap: 24px; width: auto; margin-inline: 14px; padding: 28px; background-position: 62% center; border-radius: 17px; }
   .updates::after { top: 18px; right: 18px; }
   .updates p { font-size: .88rem; }
-  .update-action { width: 100%; }
+  .updates .btn { width: 100%; }
   footer { flex-direction: column; gap: 24px; padding-block: 34px; }
 }
 
-/* Chamfered button. Not used on the page yet.
+/* Chamfered button.
    <a class="btn btn-primary" href="...">Register now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-   <button class="btn btn-secondary btn-large" type="button" disabled>Coming soon</button> */
+   <button class="btn btn-secondary" type="button" disabled>Coming soon</button> */
 .btn {
   --btn-fill: var(--color-accent);
   --btn-fill-hover: #9c145e;
