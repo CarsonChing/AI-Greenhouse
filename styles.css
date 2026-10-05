@@ -183,26 +183,52 @@ nav > a:hover { color: #367357; }
 .answer { padding: 0 20px 14px; }
 .answer p { margin: 0 0 10px; color: #506158; font-size: .9rem; line-height: 1.65; }
 
+.hero-carousel {
+  width: min(calc(100% - 48px), 1288px);
+  margin: clamp(18px, 2.5vw, 28px) auto 0;
+}
+.hero-track {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(28, 12, 36, .18);
+}
 .hero {
   --banner-ink: #f7fbff;
   --banner-muted: #d6e6f5;
   position: relative;
   isolation: isolate;
+  grid-area: 1 / 1;
   display: flex;
   align-items: center;
   overflow: hidden;
-  width: min(calc(100% - 48px), 1288px);
+  width: 100%;
   min-height: clamp(340px, 34vw, 440px);
-  margin: clamp(18px, 2.5vw, 28px) auto 0;
-  padding: clamp(28px, 3.5vw, 48px) clamp(28px, 4vw, 56px);
+  margin: 0;
+  padding: clamp(28px, 3.5vw, 48px) clamp(72px, 6.5vw, 88px);
   color: var(--banner-ink);
+  border-radius: inherit;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .65s ease, visibility 0s linear .65s;
+}
+.hero.is-active { z-index: 1; opacity: 1; visibility: visible; pointer-events: auto; transition-delay: 0s; }
+.hero-learn {
+  --banner-ink: #f3e9ff;
+  --banner-muted: #ddd0ee;
+  background:
+    linear-gradient(100deg, rgba(12, 5, 18, .78) 0%, rgba(16, 7, 24, .55) 32%, rgba(16, 8, 22, .12) 50%, rgba(16, 8, 22, 0) 64%),
+    url("assets/learn-news-banner-bg.webp") 72% center / cover no-repeat;
+}
+.hero-build {
   background:
     linear-gradient(100deg, rgba(3, 9, 26, .86) 0%, rgba(3, 11, 34, .62) 34%, rgba(3, 12, 37, .16) 52%, rgba(3, 12, 37, 0) 66%),
     url("assets/build-news-banner-bg.png") 72% center / cover no-repeat;
-  border-radius: 20px;
-  box-shadow: 0 18px 45px rgba(28, 12, 36, .18);
 }
 .hero::after { content: ""; position: absolute; z-index: 1; top: 26px; right: 28px; width: 13px; height: 13px; background: #2c74ff; box-shadow: -22px 24px 0 rgba(255, 129, 39, .92), 16px 46px 0 rgba(57, 176, 255, .92); pointer-events: none; }
+.hero-learn::after { background: #e7dbff; box-shadow: -22px 24px 0 rgba(231, 219, 255, .78), 16px 46px 0 rgba(196, 179, 234, .9); }
 .hero-copy { position: relative; z-index: 2; max-width: 38rem; }
 .hero .eyebrow { color: #e4d4ff; }
 .hero h1 { max-width: 14ch; margin: 10px 0 0; color: var(--banner-ink); font-family: var(--font-display); font-size: clamp(2.5rem, 4.4vw, 4.15rem); font-weight: 700; line-height: .92; letter-spacing: -.045em; text-transform: uppercase; }
@@ -212,6 +238,36 @@ nav > a:hover { color: #367357; }
 .hero-actions .btn-primary { width: auto; min-width: 11.5rem; }
 .hero-details { display: inline-flex; align-items: center; min-height: 44px; padding: 0; border: 0; background: none; color: var(--banner-ink); font: inherit; font-size: .92rem; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
 .hero-details:hover { color: #ffffff; }
+.carousel-arrow {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0 0 3px;
+  border: 1px solid rgba(255, 255, 255, .48);
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .30), rgba(255, 255, 255, .10));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .55), 0 8px 24px rgba(0, 0, 0, .22);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  backdrop-filter: blur(16px) saturate(170%);
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.carousel-arrow:hover { border-color: rgba(255, 255, 255, .78); background-color: rgba(255, 255, 255, .16); transform: translateY(-50%) scale(1.05); }
+.carousel-arrow-prev { left: 16px; }
+.carousel-arrow-next { right: 16px; }
+.carousel-dots { position: absolute; z-index: 4; left: 50%; bottom: 4px; display: flex; gap: 0; transform: translateX(-50%); }
+.carousel-dot { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.carousel-dot::before { content: ""; width: 7px; height: 7px; border: 1px solid rgba(255, 255, 255, .70); border-radius: 50%; background: rgba(255, 255, 255, .24); box-shadow: 0 2px 7px rgba(0, 0, 0, .28); transition: background-color .3s ease, transform .3s ease; }
+.carousel-dot.is-active::before { background: rgba(255, 255, 255, .95); transform: scale(1.2); }
 
 .highlights { width: min(calc(100% - 48px), 1288px); margin: clamp(22px, 3vw, 36px) auto 0; }
 .highlights-panel {
@@ -292,7 +348,11 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
   .details-intro p { margin-top: 10px; }
   .faq-list summary { padding: 16px; font-size: .9rem; }
   .answer { padding-inline: 16px; }
-  .hero { align-items: stretch; width: auto; min-height: 0; margin-inline: 14px; padding: 22px 20px 20px; background-image: linear-gradient(180deg, rgba(3, 9, 26, .94) 0%, rgba(3, 9, 26, .80) 48%, rgba(3, 9, 26, .32) 80%, rgba(3, 9, 26, 0) 100%), url("assets/build-news-banner-bg.png"); background-position: center, 84% 42%; border-radius: 17px; }
+  .hero-carousel { width: auto; margin-inline: 14px; }
+  .hero-track { border-radius: 17px; }
+  .hero { align-items: stretch; min-height: 0; padding: 22px 20px 54px; border-radius: inherit; }
+  .hero-learn { background-image: linear-gradient(180deg, rgba(12, 5, 18, .92) 0%, rgba(14, 6, 20, .78) 46%, rgba(14, 6, 20, .28) 78%, rgba(14, 6, 20, 0) 100%), url("assets/learn-news-banner-bg.webp"); background-position: center, 84% 42%; }
+  .hero-build { background-image: linear-gradient(180deg, rgba(3, 9, 26, .94) 0%, rgba(3, 9, 26, .80) 48%, rgba(3, 9, 26, .32) 80%, rgba(3, 9, 26, 0) 100%), url("assets/build-news-banner-bg.png"); background-position: center, 84% 42%; }
   .hero::after { top: 16px; right: 16px; }
   .hero-copy { max-width: none; padding-right: 28px; }
   .hero h1 { font-size: 2.15rem; }
@@ -301,6 +361,8 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
   .hero-meta span { display: block; }
   .hero-actions { margin-top: 14px; }
   .hero-actions .btn-primary { width: 100%; }
+  .carousel-arrow { display: none; }
+  .carousel-dots { bottom: 2px; }
   .highlights { width: auto; margin-inline: 14px; }
   .highlights-panel { padding: 18px 16px 16px; }
   .highlight-list, .highlight-facts { grid-template-columns: 1fr; }
