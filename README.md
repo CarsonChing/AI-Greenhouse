@@ -3,7 +3,7 @@ title: "AI Greenhouse Event Page"
 programme: "AI Greenhouse"
 organisation: "SHC Tech Club"
 timezone: "Asia/Hong_Kong (UTC+08:00)"
-last_updated: "2026-10-05T17:20:00+08:00"
+last_updated: "2026-10-06T01:10:00+08:00"
 updated_by: "Carson Ching"
 ---
 
@@ -25,7 +25,7 @@ Published on Cloudflare by Carson. Following the manual restructure, the static 
 - `site.js`: activates form links when valid HTTPS URLs are configured.
 - `assets/shun-hing-college-logo.png`: Shun Hing College logo displayed in the page header.
 
-The LEARN registration form and both BUILD application routes are connected. Proposal applicants can download the Markdown template directly from the BUILD card. The page itself collects no participant data. SHARE has separate presenter and audience placeholders until those registration links are available. Public funding amounts and funded-team counts are intentionally omitted for now; the funding eligibility rules are included.
+The LEARN registration form and both BUILD application routes are connected. Proposal applicants can download the Markdown template from the BUILD card. The public download URL is [https://ai-greenhouse.shc-tech-club.workers.dev/download/BUILD_application_template.md](https://ai-greenhouse.shc-tech-club.workers.dev/download/BUILD_application_template.md). `worker.js` runs first only for `/download/*`. It reads `assets/BUILD_application_template.md` and responds with `Content-Disposition: attachment`, so that URL downloads from Google Forms, email, or the browser address bar. Pages, CSS, JavaScript, images, and `/assets/*` stay on Static Assets. Opening `/assets/BUILD_application_template.md` still displays the file. The page itself collects no participant data. SHARE has separate presenter and audience placeholders until those registration links are available. Public funding amounts and funded-team counts are intentionally omitted for now; the funding eligibility rules are included.
 
 When each deadline passes, close the external form and update the page/button label; there is no automatic deadline enforcement.
 
@@ -33,4 +33,4 @@ The poster QR code and email link use https://ai-greenhouse.shc-tech-club.worker
 
 ## Local Preview
 
-From this folder, run `python3 -m http.server 4173` and open `http://localhost:4173`.
+From this folder, run `python3 -m http.server 4173` and open `http://localhost:4173`. That preview does not apply the download header. To check it, run `npx wrangler dev` and request `http://localhost:8787/download/BUILD_application_template.md`.

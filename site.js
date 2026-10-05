@@ -10,7 +10,6 @@
       const link = document.createElement("a");
       link.href = target.href;
       link.className = `btn btn-${variant}`;
-      if (download) link.download = "BUILD_application_template.md";
       const copy = document.createElement("span");
       const title = document.createElement("strong");
       title.textContent = label;
