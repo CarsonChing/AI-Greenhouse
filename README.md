@@ -25,7 +25,7 @@ Published on Cloudflare by Carson. Following the manual restructure, the static 
 - `site.js`: activates form links when valid HTTPS URLs are configured.
 - `assets/shun-hing-college-logo.png`: Shun Hing College logo displayed in the page header.
 
-The LEARN registration form and both BUILD application paths are connected. BUILD offers one form for applicants with a project proposal and another for residents who want to join a team without a proposal. The page itself collects no participant data. SHARE remains Coming Soon. Public funding amounts and funded-team counts are intentionally omitted for now; the funding eligibility rules are included.
+The LEARN registration form and both BUILD application paths are connected. BUILD offers one form for applicants with a project proposal and another for residents who want to join a team without a proposal. The page itself collects no participant data. SHARE has separate presenter and audience placeholders until those registration links are available. Public funding amounts and funded-team counts are intentionally omitted for now; the funding eligibility rules are included.
 
 When forms open, add their links to `config.js` and update the latest announcement and the FAQ sentence that says the form is coming soon. When each deadline passes, close the external form and update the page/button label; there is no automatic deadline enforcement.
 

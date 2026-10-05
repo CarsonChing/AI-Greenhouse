@@ -39,7 +39,10 @@
     ["build-without-proposal-action", config.buildWithoutProposalUrl, "Apply without a proposal", "I want to join a team", "secondary"],
     ["build-proposal-menu-action", config.buildProposalApplicationUrl, "BUILD · With proposal", "Submit your project idea", "primary"],
     ["build-without-proposal-menu-action", config.buildWithoutProposalUrl, "BUILD · Without proposal", "Ask to join a team", "secondary"],
-    ["share-action", config.shareApplicationUrl, "Apply for SHARE", "", "primary"]
+    ["share-presenter-action", config.sharePresenterRegistrationUrl, "Register as a presenter", "Share your project", "primary"],
+    ["share-audience-action", config.shareAudienceRegistrationUrl, "Register as an audience", "Join Demo Day", "secondary"],
+    ["share-presenter-menu-action", config.sharePresenterRegistrationUrl, "SHARE · Presenter", "Share your project", "primary"],
+    ["share-audience-menu-action", config.shareAudienceRegistrationUrl, "SHARE · Audience", "Join Demo Day", "secondary"]
   ];
   for (const [id, url, label, note, variant] of actions) {
     const link = createAction(url, label, note, variant);
