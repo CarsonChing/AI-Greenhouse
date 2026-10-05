@@ -1,14 +1,16 @@
 "use strict";
 (() => {
   const config = window.GREENHOUSE_CONFIG || {};
-  const createAction = (url, label, note, variant = "primary") => {
+  const createAction = (url, label, note, variant = "primary", download = false) => {
     if (!url) return null;
     try {
-      const target = new URL(url);
-      if (target.protocol !== "https:") return null;
+      const target = new URL(url, window.location.href);
+      if (!download && target.protocol !== "https:") return null;
+      if (download && target.origin !== window.location.origin) return null;
       const link = document.createElement("a");
       link.href = target.href;
       link.className = `btn btn-${variant}`;
+      if (download) link.download = "BUILD_application_template.md";
       const copy = document.createElement("span");
       const title = document.createElement("strong");
       title.textContent = label;
@@ -35,34 +37,37 @@
 
   const actions = [
     ["learn-action", config.learnRegistrationUrl, "Register for LEARN", "", "primary"],
-    ["build-proposal-action", config.buildProposalApplicationUrl, "Apply with a proposal", "I have a project idea", "primary"],
-    ["build-without-proposal-action", config.buildWithoutProposalUrl, "Apply as an individual", "I want to join a team", "secondary"],
-    ["build-proposal-menu-action", config.buildProposalApplicationUrl, "BUILD · With proposal", "Submit your project idea", "primary"],
-    ["build-without-proposal-menu-action", config.buildWithoutProposalUrl, "BUILD · As an individual", "Ask to join a team", "secondary"],
+    ["build-proposal-action", config.buildProposalApplicationUrl, "Apply with a proposal", "I have a project idea", "build"],
+    ["build-without-proposal-action", config.buildWithoutProposalUrl, "Apply as an individual", "I want to join a team", "build"],
+    ["build-proposal-menu-action", config.buildProposalApplicationUrl, "BUILD · With proposal", "Submit your project idea", "build"],
+    ["build-without-proposal-menu-action", config.buildWithoutProposalUrl, "BUILD · As an individual", "Ask to join a team", "build"],
+    ["build-template-action", config.buildTemplateUrl, "Download proposal template", "Markdown (.md)", "secondary", true],
     ["share-presenter-action", config.sharePresenterRegistrationUrl, "Register as a presenter", "Share your project", "primary"],
     ["share-audience-action", config.shareAudienceRegistrationUrl, "Register as an audience", "Join Demo Day", "secondary"],
     ["share-presenter-menu-action", config.sharePresenterRegistrationUrl, "SHARE · Presenter", "Share your project", "primary"],
     ["share-audience-menu-action", config.shareAudienceRegistrationUrl, "SHARE · Audience", "Join Demo Day", "secondary"]
   ];
-  for (const [id, url, label, note, variant] of actions) {
-    const link = createAction(url, label, note, variant);
+  for (const [id, url, label, note, variant, download] of actions) {
+    const link = createAction(url, label, note, variant, download);
     const container = document.getElementById(id);
     if (link && container) container.replaceChildren(link);
   }
 
-  const detailsButton = document.querySelector("[data-highlights-toggle]");
-  const highlights = document.getElementById("highlights");
+  const detailsButtons = [...document.querySelectorAll("[data-learn-modal-open]")];
+  const highlights = document.getElementById("learn-details-modal");
   const highlightsTitle = document.getElementById("highlights-title");
-  if (detailsButton && highlights && highlightsTitle) {
-    detailsButton.addEventListener("click", () => {
-      const open = highlights.hasAttribute("hidden");
-      highlights.toggleAttribute("hidden", !open);
-      detailsButton.setAttribute("aria-expanded", String(open));
-      detailsButton.textContent = open ? "Hide details" : "See details";
-      if (!open) return;
-      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      highlights.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
-      highlightsTitle.focus();
+  const closeDetailsButton = highlights?.querySelector("[data-learn-modal-close]");
+  if (detailsButtons.length && highlights) {
+    detailsButtons.forEach((button) => button.addEventListener("click", () => {
+        highlights.showModal();
+        highlightsTitle?.focus({ preventScroll: true });
+      }));
+    closeDetailsButton?.addEventListener("click", () => highlights.close());
+    highlights.addEventListener("click", (event) => {
+      const bounds = highlights.getBoundingClientRect();
+      const inside = event.clientX >= bounds.left && event.clientX <= bounds.right
+        && event.clientY >= bounds.top && event.clientY <= bounds.bottom;
+      if (!inside) highlights.close();
     });
   }
 
