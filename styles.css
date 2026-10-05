@@ -110,7 +110,7 @@ nav { display: flex; align-items: center; gap: clamp(20px, 2.5vw, 34px); font-si
 nav > a { text-decoration: none; }
 nav > a:hover { color: #367357; }
 .registration-menu { position: relative; border: 0; }
-.registration-menu summary { display: flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 16px; background: var(--shc-blue); color: var(--color-on-accent-2); cursor: pointer; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); font-size: .82rem; font-weight: 700; list-style: none; white-space: nowrap; transition: filter var(--duration-base) var(--ease-out); }
+.registration-menu summary { display: flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 16px; background: var(--shc-blue); color: white; cursor: pointer; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); font-size: .82rem; font-weight: 700; list-style: none; white-space: nowrap; transition: filter var(--duration-base) var(--ease-out); }
 .registration-menu summary:hover { filter: brightness(.9); }
 .registration-menu summary::-webkit-details-marker { display: none; }
 .registration-menu .icon-chevron { transition: transform .18s ease; }
@@ -370,12 +370,30 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
   --btn-border: var(--color-accent);
   --btn-border-width: var(--border-hairline);
 }
+.btn-secondary::before { background: var(--btn-border); box-shadow: none; }
+.btn-secondary::after {
+  content: "";
+  position: absolute;
+  inset: var(--btn-border-width);
+  z-index: -1;
+  background: var(--btn-fill);
+  clip-path: polygon(
+    0 0,
+    calc(100% - (var(--cut-md) - var(--btn-border-width))) 0,
+    100% calc(var(--cut-md) - var(--btn-border-width)),
+    100% 100%,
+    calc(var(--cut-md) - var(--btn-border-width)) 100%,
+    0 calc(100% - (var(--cut-md) - var(--btn-border-width)))
+  );
+  transition: background-color var(--duration-base) var(--ease-out);
+}
 .btn-large {
   min-height: 56px;
   padding: var(--space-3) var(--space-6);
   font-size: 1.05rem;
 }
-.btn:hover:not(:disabled):not([aria-disabled="true"])::before { background: var(--btn-fill-hover); }
+.btn-primary:hover:not(:disabled):not([aria-disabled="true"])::before { background: var(--btn-fill-hover); }
+.btn-secondary:hover:not(:disabled):not([aria-disabled="true"])::after { background: var(--btn-fill-hover); }
 .btn:active:not(:disabled):not([aria-disabled="true"]) { transform: translateY(1px); }
 .btn:focus-visible { outline: var(--focus-width) solid var(--color-focus); outline-offset: var(--focus-offset); }
 .btn:disabled,
@@ -390,6 +408,8 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
   background: var(--color-surface-sunken);
   box-shadow: none;
 }
+.btn:disabled::after,
+.btn[aria-disabled="true"]::after { background: var(--color-surface-sunken); }
 .btn:disabled .icon,
 .btn[aria-disabled="true"] .icon { display: none; }
 
