@@ -36,9 +36,9 @@
   const actions = [
     ["learn-action", config.learnRegistrationUrl, "Register for LEARN", "", "primary"],
     ["build-proposal-action", config.buildProposalApplicationUrl, "Apply with a proposal", "I have a project idea", "primary"],
-    ["build-without-proposal-action", config.buildWithoutProposalUrl, "Apply without a proposal", "I want to join a team", "secondary"],
+    ["build-without-proposal-action", config.buildWithoutProposalUrl, "Apply as an individual", "I want to join a team", "secondary"],
     ["build-proposal-menu-action", config.buildProposalApplicationUrl, "BUILD · With proposal", "Submit your project idea", "primary"],
-    ["build-without-proposal-menu-action", config.buildWithoutProposalUrl, "BUILD · Without proposal", "Ask to join a team", "secondary"],
+    ["build-without-proposal-menu-action", config.buildWithoutProposalUrl, "BUILD · As an individual", "Ask to join a team", "secondary"],
     ["share-presenter-action", config.sharePresenterRegistrationUrl, "Register as a presenter", "Share your project", "primary"],
     ["share-audience-action", config.shareAudienceRegistrationUrl, "Register as an audience", "Join Demo Day", "secondary"],
     ["share-presenter-menu-action", config.sharePresenterRegistrationUrl, "SHARE · Presenter", "Share your project", "primary"],
