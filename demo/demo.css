@@ -1,0 +1,61 @@
+/* Layout refinements scoped to the practice page. */
+.demo-page .masthead { padding-block: 18px; }
+.demo-page nav { gap: 24px; }
+.demo-page nav > a:hover { color: var(--color-accent); }
+.demo-page .hero-carousel { margin-top: 24px; }
+.demo-page .hero { min-height: 300px; padding: clamp(28px, 5vw, 64px); }
+.demo-page .hero-copy { max-width: 620px; }
+.demo-page .hero h1 { font-family: var(--font-display); font-size: clamp(2.8rem, 5.5vw, 4.8rem); line-height: 1; letter-spacing: -.035em; }
+.demo-page .hero-lead { max-width: 480px; line-height: 1.6; }
+.demo-page .hero-meta { margin-top: 22px; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; }
+.demo-page .demo-vote { padding-top: 0; padding-bottom: 40px; }
+.demo-page .demo-vote-card { grid-template-columns: 128px minmax(0, 1fr) auto; gap: 8px 28px; padding: 26px 32px; background: var(--color-surface); border-color: var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-1); }
+.demo-page .demo-vote-card .eyebrow { grid-column: 2; grid-row: 1; margin: 0; color: var(--color-text-muted); }
+.demo-page .demo-vote-card h2 { grid-column: 2; grid-row: 2; font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem); letter-spacing: -.02em; }
+.demo-page .demo-vote-count { grid-row: 1 / span 2; min-width: 0; width: 100%; overflow-x: auto; scrollbar-width: none; text-align: center; padding-right: 28px; border-right: 1px solid var(--line); font-size: 3.8rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.demo-page .demo-vote-buttons { grid-column: 3; grid-row: 1 / span 2; gap: 12px; }
+.demo-page .demo-thumb { width: 58px; height: 58px; margin: 0; border-radius: var(--radius-md); box-shadow: none; transition: filter var(--duration-base); }
+.demo-page .demo-thumb:hover { filter: brightness(.95); }
+.demo-page .demo-thumb svg { width: 28px; height: 28px; }
+.demo-page .programme { padding-top: 40px; padding-bottom: 48px; }
+.demo-page .section-heading { align-items: center; padding: 0 0 24px; }
+.demo-page .section-heading h2 { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 600; letter-spacing: -.035em; }
+.demo-page .section-heading > p { gap: 6px; white-space: normal; max-width: 340px; }
+.demo-page .section-heading > p strong { margin: 0; color: var(--color-text); font-size: .95rem; }
+.demo-page .section-heading > p span { transform: none; line-height: 1.5; }
+.demo-page .stage { min-height: 340px; padding: 28px; }
+.demo-page .stage-body { flex: 1; }
+.demo-page .stage h2 { margin-top: 28px; font-family: var(--font-display); font-size: clamp(2.8rem, 4vw, 3.8rem); letter-spacing: -.035em; }
+.demo-page .stage h3 { margin-top: 10px; margin-bottom: 16px; line-height: 1.5; }
+.demo-page .stage p { font-size: .9rem; }
+.demo-page .stage-footer { padding-top: 20px; }
+.demo-page .stage-footer .btn { width: 100%; justify-content: space-between; }
+.demo-page .details { padding-top: 36px; padding-bottom: 48px; border-top: 1px solid var(--line); }
+.demo-page .details-intro h2 { font-family: var(--font-display); letter-spacing: -.035em; }
+.demo-page .faq-group { margin-bottom: 0; }
+.demo-page .faq-group > header { padding-top: 0; }
+.demo-page .faq-list { display: grid; gap: 24px; }
+.demo-page footer { padding-bottom: 100px; }
+.demo-page .demo-reset { right: max(24px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); min-width: 144px; min-height: 48px; box-shadow: none; filter: drop-shadow(0 4px 10px rgb(28 22 18 / .16)); }
+@media (max-width: 760px) {
+  .demo-page .masthead { gap: 16px; }
+  .demo-page .demo-mast { justify-content: space-between; gap: 12px; }
+  .demo-page nav { gap: 20px; }
+  .demo-page .demo-toolbar .btn { padding-inline: 16px; font-size: .8rem; }
+  .demo-page .hero { min-height: 280px; padding: 28px 24px; }
+  .demo-page .hero-copy { padding-right: 0; }
+  .demo-page .hero h1 { font-size: clamp(2.3rem, 8vw, 3.3rem); }
+  .demo-page .hero-meta { margin-top: 16px; }
+  .demo-page .demo-vote-card { grid-template-columns: 88px minmax(0, 1fr); padding: 22px; gap: 8px 20px; }
+  .demo-page .demo-vote-count { grid-row: 1 / span 3; padding-right: 20px; min-width: 0; font-size: 3.2rem; }
+  .demo-page .demo-vote-buttons { grid-column: 2; grid-row: 3; margin-top: 8px; }
+  .demo-page .demo-thumb { width: 52px; height: 52px; }
+  .demo-page .section-heading { align-items: flex-start; gap: 12px; }
+  .demo-page .stage { min-height: 300px; padding: 24px; }
+  .demo-page .details { padding-top: 28px; }
+  .demo-page .demo-reset { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); }
+}
+
+.demo-page .demo-reset { --btn-fill: var(--shc-blue); --btn-fill-hover: #12a8c4; --btn-ink: var(--color-on-accent-2); }
+body.blackout .demo-reset { background: transparent !important; color: var(--color-on-accent-2) !important; }
+body.blackout .demo-reset::before { background: var(--shc-blue) !important; }

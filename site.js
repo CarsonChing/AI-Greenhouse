@@ -52,23 +52,26 @@
     if (link && container) container.replaceChildren(link);
   }
 
-  const detailsButtons = [...document.querySelectorAll("[data-learn-modal-open]")];
-  const highlights = document.getElementById("learn-details-modal");
-  const highlightsTitle = document.getElementById("highlights-title");
-  const closeDetailsButton = highlights?.querySelector("[data-learn-modal-close]");
-  if (detailsButtons.length && highlights) {
+  const bindDetailsModal = (openSelector, dialog, closeSelector) => {
+    const detailsButtons = [...document.querySelectorAll(openSelector)];
+    if (!detailsButtons.length || !dialog) return;
+    const highlightsTitle = dialog.querySelector("h2");
+    const closeDetailsButton = dialog.querySelector(closeSelector);
     detailsButtons.forEach((button) => button.addEventListener("click", () => {
-        highlights.showModal();
-        highlightsTitle?.focus({ preventScroll: true });
-      }));
-    closeDetailsButton?.addEventListener("click", () => highlights.close());
-    highlights.addEventListener("click", (event) => {
-      const bounds = highlights.getBoundingClientRect();
+      dialog.showModal();
+      highlightsTitle?.focus({ preventScroll: true });
+    }));
+    closeDetailsButton?.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (event) => {
+      const bounds = dialog.getBoundingClientRect();
       const inside = event.clientX >= bounds.left && event.clientX <= bounds.right
         && event.clientY >= bounds.top && event.clientY <= bounds.bottom;
-      if (!inside) highlights.close();
+      if (!inside) dialog.close();
     });
-  }
+  };
+
+  bindDetailsModal("[data-learn-modal-open]", document.getElementById("learn-details-modal"), "[data-learn-modal-close]");
+  bindDetailsModal("[data-build-modal-open]", document.getElementById("build-details-modal"), "[data-build-modal-close]");
 
   const carousel = document.querySelector("[data-carousel]");
   if (carousel) {
@@ -154,4 +157,5 @@
     show(0);
     startTimer();
   }
+
 })();

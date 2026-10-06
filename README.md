@@ -3,7 +3,7 @@ title: "AI Greenhouse Event Page"
 programme: "AI Greenhouse"
 organisation: "SHC Tech Club"
 timezone: "Asia/Hong_Kong (UTC+08:00)"
-last_updated: "2026-10-06T01:10:00+08:00"
+last_updated: "2026-10-06T21:41:05+08:00"
 updated_by: "Carson Ching"
 ---
 
@@ -29,8 +29,12 @@ The LEARN registration form and both BUILD application routes are connected. Pro
 
 When each deadline passes, close the external form and update the page/button label; there is no automatic deadline enforcement.
 
-The poster QR code and email link use https://ai-greenhouse.shc-tech-club.workers.dev/. QR assets are saved in the parent project’s `Programme/Assets/` folder.
+The poster QR code and email link use https://ai-greenhouse.shc-tech-club.workers.dev/. QR assets are saved in the parent project’s `Programme/Communications/Shared/` folder.
 
 ## Local Preview
 
 From this folder, run `python3 -m http.server 4173` and open `http://localhost:4173`. That preview does not apply the download header. To check it, run `npx wrangler dev` and request `http://localhost:8787/download/BUILD_application_template.md`.
+
+## Debug Live Demo practice page
+
+Open `/demo` directly for the Debug Live Demo exercise. The page lives in `demo/index.html`, with its interactions in `demo/demo.js`, page layout in `demo/demo.css`, and shared styling in `styles.css`. It has no entry popup or main-navigation link. The intentionally broken interactions are part of the exercise; Reset Demo restores their starting state.
