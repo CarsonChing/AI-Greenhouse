@@ -446,8 +446,8 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
   --btn-border-width: var(--border-hairline);
 }
 .btn-build {
-  --btn-fill: #cbd9ea;
-  --btn-fill-hover: #b8cce4;
+  --btn-fill: #f9e0c8;
+  --btn-fill-hover: #f4d0ae;
   --btn-ink: #1c1612;
   --btn-border: transparent;
   --btn-border-width: 0px;
@@ -481,18 +481,18 @@ footer a { font-size: .88rem; text-underline-offset: 4px; }
 .btn:focus-visible { outline: var(--focus-width) solid var(--color-focus); outline-offset: var(--focus-offset); }
 .btn:disabled,
 .btn[aria-disabled="true"] {
-  --btn-ink: var(--color-text-muted);
-  color: var(--color-text-muted);
+  --btn-ink: #6e6e6e;
+  color: #6e6e6e;
   cursor: not-allowed;
   opacity: 1;
 }
 .btn:disabled::before,
 .btn[aria-disabled="true"]::before {
-  background: var(--color-surface-sunken);
+  background: #e6e6e6;
   box-shadow: none;
 }
 .btn:disabled::after,
-.btn[aria-disabled="true"]::after { background: var(--color-surface-sunken); }
+.btn[aria-disabled="true"]::after { background: #e6e6e6; }
 .btn:disabled .icon,
 .btn[aria-disabled="true"] .icon { display: none; }
 
