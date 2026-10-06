@@ -35,7 +35,6 @@
   };
 
   const actions = [
-    ["learn-action", config.learnRegistrationUrl, "Register for LEARN", "", "primary"],
     ["build-proposal-action", config.buildProposalApplicationUrl, "Apply with a proposal", "I have a project idea", "build"],
     ["build-without-proposal-action", config.buildWithoutProposalUrl, "Apply as an individual", "I want to join a team", "build"],
     ["build-proposal-menu-action", config.buildProposalApplicationUrl, "BUILD · With proposal", "Submit your project idea", "build"],
@@ -72,6 +71,26 @@
 
   bindDetailsModal("[data-learn-modal-open]", document.getElementById("learn-details-modal"), "[data-learn-modal-close]");
   bindDetailsModal("[data-build-modal-open]", document.getElementById("build-details-modal"), "[data-build-modal-close]");
+
+  const buildDialog = document.getElementById("build-details-modal");
+  if (buildDialog) {
+    const pageButtons = [...buildDialog.querySelectorAll("[data-build-page]")];
+    const pages = [...buildDialog.querySelectorAll(".build-detail-page")];
+    const showBuildPage = (id, focus = false) => {
+      pageButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.buildPage === id)));
+      pages.forEach((page) => { page.hidden = page.id !== id; });
+      buildDialog.scrollTop = 0;
+      if (focus) buildDialog.querySelector(`#${id} .build-section-title`)?.focus({ preventScroll: true });
+    };
+    pageButtons.forEach((button) => button.addEventListener("click", () => showBuildPage(button.dataset.buildPage, true)));
+    document.querySelectorAll("[data-build-modal-open]").forEach((button) => button.addEventListener("click", () => showBuildPage("build-expectations")));
+  }
+
+  document.querySelectorAll("[data-demo-url]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!button.disabled) window.location.assign(button.dataset.demoUrl);
+    });
+  });
 
   const carousel = document.querySelector("[data-carousel]");
   if (carousel) {

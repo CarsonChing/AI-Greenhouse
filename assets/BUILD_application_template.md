@@ -19,6 +19,22 @@ members:
 # Copy the four-line member entry for every additional member.
 ---
 
+<!-- Project category guidance:
+Everyday life: everyday tasks for an individual or residents; e.g. a pantry tracker with saved recipes and expiry reminders.
+Team working: group coordination; e.g. an event planner with role claiming, theme voting and a shared checklist.
+Academics: studying or learning; e.g. revision bingo with study challenges and a progress picture.
+Categories can overlap. These examples need no AI API; AI can help write and debug the code.
+
+Optional subsidy requests are assessed on five criteria:
+Ethics: avoid harm, exclusion, cheating, surveillance and unnecessary private-data collection.
+Practicality: solve a real problem for specific users who would use the solution again.
+Feasibility: demonstrate a focused first version with running code in about one month.
+AI usage and understanding: explain how AI helps, what people verify and what AI will not decide alone.
+Originality: address a specific need rather than copying a product with a new name or appearance.
+Funding selection does not affect participation in BUILD or general programme support.
+See Programme/BUILD/application_guide.md for the full category descriptions and criteria.
+Delete this guidance before submitting. -->
+
 # 1. Problem and users
 
 [Describe one specific problem and the people who experience it. Explain when or how often it happens, how people currently deal with it, and why they would return to a better solution. Include a concrete observation or example where possible.]
@@ -27,7 +43,7 @@ members:
 
 [Describe the app or coded project you will build and the main steps a user will take. Identify the essential features for a focused first version, what you can realistically complete in about one month, and exactly what running code you expect to demonstrate.]
 
-> **Optional subsidy section:** Complete Sections 3 and 4 only if your team wants to be considered for AI subscription subsidy. A qualifying team must have a Shun Hing College resident as its representative, and that representative must be able to attend Demo Day in person. Completing these sections does not guarantee support, and reimbursement requires valid receipts for eligible AI subscription expenses. Delete Sections 3 and 4 if you do not want subsidy consideration.
+> **Optional subsidy section:** Complete Sections 3 and 4 only if your team wants to be considered for AI subscription subsidy. At least one team member must attend Demo Day in person. Completing these sections does not guarantee support, and reimbursement requires valid receipts for eligible AI subscription expenses. Delete Sections 3 and 4 if you do not want subsidy consideration.
 
 # 3. AI use, checking, responsibility and originality
 

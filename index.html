@@ -7,9 +7,9 @@
 <meta name="description" content="AI Greenhouse by SHC Tech Club. Learn to build with AI, develop your idea, and share your progress. Open to all JCSV III residents. No coding experience needed.">
 <title>AI Greenhouse · SHC Tech Club</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23123c2d'/%3E%3Cpath d='M12 28V16l8-7 8 7v12zM20 10v18M12 20h16' fill='none' stroke='%23c8f67a' stroke-width='2'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css?v=20261006q">
-<script src="config.js?v=20261006m" defer></script>
-<script src="site.js?v=20261006-direct-demo" defer></script>
+<link rel="stylesheet" href="styles.css?v=20261007-demo-arrow">
+<script src="config.js?v=20261007-walkin" defer></script>
+<script src="site.js?v=20261007-demo-button" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -21,7 +21,7 @@
 <details class="registration-menu">
 <summary>Register &amp; apply <svg class="icon icon-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></summary>
 <div class="registration-dropdown">
-<a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSclp-M1hAEu59fIbTI5YsTGC9y3pYLcwqZQO-PgWtwMVoPAmQ/viewform?usp=header"><span><strong>LEARN</strong><small>Registration open</small></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+<button class="btn btn-secondary" type="button" disabled><span><strong>LEARN</strong><small>Registration closed</small></span></button>
 <div id="build-proposal-menu-action"><a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSetrF7-lV2-c03RsnGoc3B59AE78LMj4_DUhWnRXPhQeQXA1Q/viewform?usp=header"><span><strong>BUILD · With proposal</strong><small>Submit your project idea</small></span></a></div>
 <div id="build-without-proposal-menu-action"><a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSfUpO9frn1dDnDgZPU8wenKv8_XViGmwCPdinsUmmS8X1OshA/viewform?usp=header"><span><strong>BUILD · As an individual</strong><small>Ask to join a team</small></span></a></div>
 <div id="share-presenter-menu-action"><button class="btn btn-secondary" type="button" disabled><span><strong>SHARE · Presenter</strong><small>Registration coming soon</small></span></button></div>
@@ -36,12 +36,12 @@
     <article class="hero hero-learn is-active" aria-labelledby="hero-learn-title" data-carousel-slide>
       <div class="hero-copy">
         <p class="eyebrow">LEARN · AI Workshop</p>
-        <h1 id="hero-learn-title">LEARN registration is open.</h1>
+        <h1 id="hero-learn-title">Walk in to LEARN tonight.</h1>
         <p class="hero-lead">See how people turn ideas into useful prototypes with AI. No coding experience is needed.</p>
         <p class="hero-meta"><span>7 October · 8–9:30 pm</span><span>A-303A · Shun Hing College</span></p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSclp-M1hAEu59fIbTI5YsTGC9y3pYLcwqZQO-PgWtwMVoPAmQ/viewform?usp=header">Register now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          <button class="hero-details" type="button" aria-haspopup="dialog" aria-controls="learn-details-modal" data-learn-modal-open>See details</button>
+          <button class="btn btn-primary" type="button" data-learn-modal-open>Workshop details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+          <button class="btn btn-secondary" type="button" data-demo-url="/demo/" disabled>Interactive demo <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
         </div>
       </div>
     </article>
@@ -70,115 +70,95 @@
   <div class="highlights-panel">
     <button class="modal-close" type="button" aria-label="Close LEARN details" data-learn-modal-close><span aria-hidden="true">×</span></button>
     <header class="highlights-head">
-      <p class="eyebrow">This session</p>
-      <h2 id="highlights-title" tabindex="-1">Session highlights.</h2>
+      <p class="eyebrow">LEARN · AI Workshop</p>
+      <h2 id="highlights-title" tabindex="-1">Tonight’s programme.</h2>
     </header>
     <ol class="highlight-list">
       <li>
-        <span>01</span>
-        <h3>No coding needed</h3>
-        <p>Open to all JCSV III residents, including people who are new to building with AI.</p>
+        <svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5C8 2 4 3 2 4v15c3-1 6-1 10 2 4-3 7-3 10-2V4c-2-1-6-2-10 1v16"/></svg><span>01 / LEARN</span>
+        <h3>Guest teaching + Q&amp;A</h3>
+        <p>Explore Plan, Act, Verify with webpage and study-planner examples. Learn to choose tools, prompt AI and check results, then ask questions.</p>
       </li>
       <li>
-        <span>02</span>
-        <h3>See it demonstrated</h3>
-        <p>Explore vibe-coding through demos, discussion, and practical guidance, and see how ideas become useful prototypes.</p>
+        <svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="1"/><path d="M2 20h20M8 20l1-4m7 4-1-4"/></svg><span>02 / TRY</span>
+        <h3>Debugging activity</h3>
+        <p>Spot an interface problem, describe a fix and try it with AI. Repeat the action to check it works.</p>
       </li>
       <li>
-        <span>03</span>
-        <h3>Come for this workshop</h3>
-        <p>LEARN stands on its own. You can join just this session. BUILD is a separate choice.</p>
+        <svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="13" rx="1"/><path d="m10 7 5 3-5 3zM12 16v5M8 21h8"/></svg><span>03 / DISCOVER</span>
+        <h3>Project demonstration</h3>
+        <p>See a finished project in action and discover what it can do.</p>
       </li>
       <li>
-        <span>04</span>
-        <h3>Meet other residents</h3>
-        <p>Bring your curiosity and meet others who are learning to build with AI.</p>
+        <svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg><span>04 / NEXT STEPS</span>
+        <h3>BUILD invitation + close</h3>
+        <p>Explore the two ways to join BUILD if you want to keep building. Participation is optional.</p>
       </li>
     </ol>
     <dl class="highlight-facts">
       <div><dt>Date</dt><dd>Wednesday 7 October</dd></div>
       <div><dt>Time</dt><dd>8:00–9:30 pm</dd></div>
-      <div><dt>Where</dt><dd>In person · A-303A (Multifunctional Area), Shun Hing College, JCSV III</dd></div>
-      <div><dt>Who</dt><dd>All JCSV III residents. No coding experience needed.</dd></div>
+      <div><dt>Where</dt><dd>A-303A (Multifunctional Area), Shun Hing College</dd></div>
+      <div><dt>Who &amp; language</dt><dd>All JCSV III residents · English · No coding experience needed</dd></div>
     </dl>
-    <p class="highlight-note">Register by 6 October, 23:59 HKT. Walk-ins are welcome, with priority given to registered participants. Bringing a laptop is recommended.</p>
-    <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSclp-M1hAEu59fIbTI5YsTGC9y3pYLcwqZQO-PgWtwMVoPAmQ/viewform?usp=header">Register now <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <p class="highlight-note">Online registration is closed. Walk-ins are welcome, with priority given to registered participants. A laptop is recommended. Stay for mingling after the workshop. Attending LEARN does not commit you to BUILD.</p>
   </div>
 </dialog>
 <dialog class="highlights" id="build-details-modal" aria-labelledby="build-highlights-title">
   <div class="highlights-panel">
     <button class="modal-close" type="button" aria-label="Close BUILD details" data-build-modal-close><span aria-hidden="true">×</span></button>
-    <header class="highlights-head">
-      <p class="eyebrow">This fellowship</p>
-      <h2 id="build-highlights-title" tabindex="-1">What you get.</h2>
-    </header>
-    <div class="build-layout">
-      <ol class="highlight-list build-benefits">
-        <li>
-          <span>01</span>
-          <h3>Support while you build</h3>
-          <p>Peer and technical support while you build, at your own pace.</p>
-        </li>
-        <li>
-          <span>02</span>
-          <h3>Co-working and community</h3>
-          <p>Optional co-working sessions and a community of fellow builders.</p>
-        </li>
-        <li>
-          <span>03</span>
-          <h3>Demo Day</h3>
-          <p>Share what you built and learned, with a certificate of completion for those who present.</p>
-        </li>
-        <li>
-          <span>04</span>
-          <h3>A project of your own</h3>
-          <p>Something to talk about when employers ask about your AI experience.</p>
-        </li>
+    <header class="highlights-head"><p class="eyebrow">BUILD · Fellowship details</p><h2 id="build-highlights-title" tabindex="-1">Find your starting point.</h2></header>
+    <nav class="build-detail-pages" aria-label="BUILD detail pages">
+      <button type="button" data-build-page="build-expectations" aria-controls="build-expectations" aria-pressed="true">01 · Experience &amp; categories</button>
+      <button type="button" data-build-page="build-selection" aria-controls="build-selection" aria-pressed="false">02 · Subsidy selection</button>
+    </nav>
+    <section id="build-expectations" class="build-detail-page" aria-labelledby="build-expectations-title">
+      <h3 id="build-expectations-title" class="build-section-title" tabindex="-1">What to expect</h3>
+      <ol class="highlight-list build-expectations-list">
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 20v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5"/></svg><h3>Team matching</h3><p>Join a team or form one with compatible builders. Matching needs mutual agreement and is not guaranteed.</p></li>
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="1"/><path d="M2 20h20M8 20l1-4m7 4-1-4"/></svg><h3>Co-working sessions</h3><p>Optional sessions to build together, ask questions and work through problems.</p></li>
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4zM8 8h8M8 12h5"/></svg><h3>WhatsApp community</h3><p>Share progress, meet fellow builders and receive programme updates.</p></li>
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="13" rx="1"/><path d="m10 7 5 3-5 3zM12 16v5M8 21h8"/></svg><h3>Demo Day</h3><p>Show a working prototype and what you learned. It does not need to be polished.</p></li>
       </ol>
-      <div class="build-side">
-        <dl class="highlight-facts build-facts">
-          <div><dt>Closes</dt><dd>16 October 2026, 23:59 HKT</dd></div>
-          <div><dt>Who</dt><dd>All JCSV III residents</dd></div>
-          <div><dt>Pace</dt><dd>Your own. No weekly schedule.</dd></div>
-          <div><dt>Subsidy</dt><dd>AI subscription support for selected teams</dd></div>
-        </dl>
-        <div class="build-paths">
-          <p>Choose one path. No coding experience or workshop attendance is required.</p>
-          <div>
-            <h3>Apply with a proposal</h3>
-            <ul>
-              <li>You already have an idea, alone or with friends.</li>
-              <li>Submit a short proposal, and say if you would like teammates.</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Apply as an individual</h3>
-            <ul>
-              <li>You want to build with others, but do not have a project yet.</li>
-              <li>We may match you with a team. A match needs everyone's agreement.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="highlight-actions">
-      <a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSetrF7-lV2-c03RsnGoc3B59AE78LMj4_DUhWnRXPhQeQXA1Q/viewform?usp=header">Apply with a proposal <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-      <a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSfUpO9frn1dDnDgZPU8wenKv8_XViGmwCPdinsUmmS8X1OshA/viewform?usp=header">Apply as an individual <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-    </div>
+      <h3 class="build-section-title">Three ways to focus your project</h3>
+      <p class="highlight-note">Choose by who you help and the problem you solve. Categories can overlap. No AI API is needed for these examples; AI can help build the code.</p>
+      <ul class="highlight-list build-categories-list">
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-8h6v8"/></svg><h3>Everyday life</h3><p>Make everyday tasks easier for an individual or residents.</p><p><strong>Example:</strong> A pantry tracker with saved recipe matches and expiry reminders.</p></li>
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 20v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5"/></svg><h3>Team working</h3><p>Help a group coordinate tasks, people or shared information.</p><p><strong>Example:</strong> An event planner with role claiming, theme voting and a shared checklist.</p></li>
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5C8 2 4 3 2 4v15c3-1 6-1 10 2 4-3 7-3 10-2V4c-2-1-6-2-10 1v16"/></svg><h3>Academics</h3><p>Support studying, learning or academic organisation.</p><p><strong>Example:</strong> Revision bingo with study challenges that reveal a progress picture.</p></li>
+      </ul>
+      <p class="highlight-note">Aim for functioning code you can demonstrate. Academic tools should support learning and protect academic integrity.</p>
+    </section>
+    <section id="build-selection" class="build-detail-page" aria-labelledby="build-selection-title" hidden>
+      <h3 id="build-selection-title" class="build-section-title" tabindex="-1">How AI subscription subsidy is selected</h3>
+      <p class="highlight-note">These criteria assess requests for AI subscription support. Funding selection does not affect participation in BUILD or access to general programme support.</p>
+      <ul class="highlight-list build-criteria-list">
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4 8 9 8 9s8-5 8-9V6z"/><path d="m8 12 3 3 5-6"/></svg><h3>Ethics</h3><p>Avoid harm, exclusion, cheating, surveillance and unnecessary private-data collection.</p></li>
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="m12 12 8-8"/></svg><h3>Practicality</h3><p>Solve a real problem for specific users who have a reason to use the solution again.</p></li>
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14M7 20V9l5-6 5 6v11M9 12h6M9 16h6"/></svg><h3>Feasibility</h3><p>Show how a small team can demonstrate a focused first version with running code in about one month.</p></li>
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4M8 12h.01M16 12h.01M8 16h8"/></svg><h3>AI usage and understanding</h3><p>Explain how AI helps, what people verify and what AI will not decide alone.</p></li>
+        <li><svg class="build-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M8 14a6 6 0 1 1 8 0l-1 4H9z"/></svg><h3>Originality</h3><p>Address a specific need rather than copying an existing product with a new name or appearance.</p></li>
+      </ul>
+      <aside class="build-selection-note" aria-labelledby="build-eligibility-title">
+        <h3 id="build-eligibility-title">To be considered</h3>
+        <p>Complete optional Sections 3–4 of the proposal. At least one team member must attend Demo Day in person.</p>
+        <p>Consideration does not guarantee support. Reimbursement requires valid receipts for eligible AI subscription expenses.</p>
+      </aside>
+    </section>
   </div>
 </dialog>
 <section class="programme wrap" id="programme" aria-labelledby="programme-title">
         <div class="section-heading"><h2 id="programme-title">AI GREENHOUSE</h2><p><strong>Three ways to take part.</strong><span>Start with one stage or follow the whole journey.</span></p></div>
 <p class="swipe-hint" aria-hidden="true">Swipe to explore <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></p>
 <div class="stage-grid">
-<article class="stage learn" id="learn"><div class="stage-top"><span>01 / EXPLORE</span><button class="pill pill-action" type="button" aria-haspopup="dialog" aria-controls="learn-details-modal" data-learn-modal-open>See details</button></div><div class="stage-body"><h2>LEARN</h2><h3>AI Workshop</h3><p>See how people turn ideas into useful prototypes with AI. No coding experience is needed.</p><div class="feature-list"><strong>What to expect</strong><ul><li>Beginner lesson: Plan, Act, Verify</li><li>Questions with guest speakers</li><li>AI-assisted debugging activity</li><li>A student-built project demo</li></ul></div><dl class="event-facts"><div><dt>When</dt><dd>7 October · 8–9:30 pm</dd></div><div><dt>Where</dt><dd>A-303A · Shun Hing College</dd></div></dl><p class="small-note">Bring a laptop if you can.</p></div><div class="stage-footer"><p class="deadline"><span>Register by</span><strong>6 October · 23:59 HKT</strong></p><div id="learn-action"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSclp-M1hAEu59fIbTI5YsTGC9y3pYLcwqZQO-PgWtwMVoPAmQ/viewform?usp=header">Register for LEARN <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div></article>
-<article class="stage build" id="build"><div class="stage-top"><span>02 / EXPERIMENT</span><button class="pill pill-action" type="button" aria-haspopup="dialog" aria-controls="build-details-modal" data-build-modal-open>See details</button></div><div class="stage-body"><h2>BUILD</h2><h3>AI Building Fellowship</h3><p>Bring an idea, or join a team to build an AI project at your own pace with support when needed.</p><div class="feature-list"><strong>What you get</strong><ul><li>Peer and technical support</li><li>Demo Day opportunity</li><li>Certificate of completion</li><li>AI subscription support for selected teams</li></ul></div><div class="build-template"><p><strong>Proposal template</strong><span>Only needed if you apply with a proposal.</span></p><div id="build-template-action"><a class="btn btn-secondary" href="/download/BUILD_application_template.md"><span><strong>Download proposal template</strong><small>Markdown (.md)</small></span></a></div></div></div><div class="stage-footer"><p class="deadline"><span>Applications close</span><strong>16 October 2026 · 23:59 HKT</strong></p><div class="build-actions"><div id="build-proposal-action"><a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSetrF7-lV2-c03RsnGoc3B59AE78LMj4_DUhWnRXPhQeQXA1Q/viewform?usp=header"><span><strong>Apply with a proposal</strong><small>I have a project idea</small></span></a></div><div id="build-without-proposal-action"><a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSfUpO9frn1dDnDgZPU8wenKv8_XViGmwCPdinsUmmS8X1OshA/viewform?usp=header"><span><strong>Apply as an individual</strong><small>I want to join a team</small></span></a></div></div></div></article>
-<article class="stage share" id="share"><div class="stage-top"><span>03 / CONNECT</span><span class="pill pill-disabled" aria-disabled="true">See details</span></div><div class="stage-body"><h2>SHARE</h2><h3>AI Demo Day</h3><p>Show what you made, exchange lessons, and discover other residents’ projects.</p><div class="feature-list"><strong>What to expect</strong><ul><li>A two-hour evening in mid-November</li><li>Casual project demonstrations</li><li>Finished work or progress welcome</li><li>Presenter and audience options</li></ul></div></div><div class="stage-footer"><p class="deadline"><span>Date and programme</span><strong>Coming soon</strong></p><div class="share-actions"><div id="share-presenter-action"><button class="btn btn-secondary" type="button" disabled><span><strong>Register as a presenter</strong><small>Coming soon</small></span></button></div><div id="share-audience-action"><button class="btn btn-secondary" type="button" disabled><span><strong>Register as an audience</strong><small>Coming soon</small></span></button></div></div></div></article>
+<article class="stage learn" id="learn"><div class="stage-top"><span>01 / EXPLORE</span><button class="pill pill-action" type="button" aria-haspopup="dialog" aria-controls="learn-details-modal" data-learn-modal-open>See details</button></div><div class="stage-body"><h2>LEARN</h2><h3>AI Workshop</h3><p>See how people turn ideas into useful prototypes with AI. No coding experience is needed.</p><div class="feature-list"><strong>What to expect</strong><ul><li>Plan, Act, Verify with webpage and planner examples</li><li>Prompting, testing, privacy, and audience Q&A</li><li>AI-assisted debugging activity</li><li>A student-built project demo</li></ul></div><dl class="event-facts"><div><dt>When</dt><dd>7 October · 8–9:30 pm</dd></div><div><dt>Where</dt><dd>A-303A · Shun Hing College</dd></div></dl><p class="small-note">Bring a laptop if you can.</p></div><div class="stage-footer"><p class="deadline"><span>Online registration closed</span><strong>Walk-ins welcome</strong></p><div class="stage-actions"><div id="learn-action"><button class="btn btn-secondary" type="button" disabled><span><strong>Registration closed</strong><small>Walk-ins welcome</small></span></button></div><div><button class="btn btn-primary" type="button" data-learn-modal-open><span><strong>Workshop details</strong><small>Programme, time and venue</small></span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button></div></div></div></article>
+<article class="stage build" id="build"><div class="stage-top"><span>02 / EXPERIMENT</span><button class="pill pill-action" type="button" aria-haspopup="dialog" aria-controls="build-details-modal" data-build-modal-open>See details</button></div><div class="stage-body"><h2>BUILD</h2><h3>AI Building Fellowship</h3><p>Bring an idea, or join a team to build an AI project at your own pace with support when needed.</p><div class="feature-list"><strong>What you get</strong><ul><li>Peer and technical support</li><li>Demo Day opportunity</li><li>Certificate of completion</li><li>AI subscription support for selected teams</li></ul></div><div class="build-template"><p><strong>Proposal template</strong><span>Only needed if you apply with a proposal.</span></p><div id="build-template-action"><a class="btn btn-secondary" href="/download/BUILD_application_template.md"><span><strong>Download proposal template</strong><small>Markdown (.md)</small></span></a></div></div></div><div class="stage-footer"><p class="deadline"><span>Applications close</span><strong>16 October 2026 · 23:59 HKT</strong></p><div class="stage-actions build-actions"><div id="build-proposal-action"><a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSetrF7-lV2-c03RsnGoc3B59AE78LMj4_DUhWnRXPhQeQXA1Q/viewform?usp=header"><span><strong>Apply with a proposal</strong><small>I have a project idea</small></span></a></div><div id="build-without-proposal-action"><a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSfUpO9frn1dDnDgZPU8wenKv8_XViGmwCPdinsUmmS8X1OshA/viewform?usp=header"><span><strong>Apply as an individual</strong><small>I want to join a team</small></span></a></div></div></div></article>
+<article class="stage share" id="share"><div class="stage-top"><span>03 / CONNECT</span><span class="pill pill-disabled" aria-disabled="true">See details</span></div><div class="stage-body"><h2>SHARE</h2><h3>AI Demo Day</h3><p>Show what you made, exchange lessons, and discover other residents’ projects.</p><div class="feature-list"><strong>What to expect</strong><ul><li>A two-hour evening in mid-November</li><li>Casual project demonstrations</li><li>Finished work or progress welcome</li><li>Presenter and audience options</li></ul></div></div><div class="stage-footer"><p class="deadline"><span>Date and programme</span><strong>Coming soon</strong></p><div class="stage-actions share-actions"><div id="share-presenter-action"><button class="btn btn-secondary" type="button" disabled><span><strong>Register as a presenter</strong><small>Coming soon</small></span></button></div><div id="share-audience-action"><button class="btn btn-secondary" type="button" disabled><span><strong>Register as an audience</strong><small>Coming soon</small></span></button></div></div></div></article>
 </div>
 </section>
 <section class="details wrap" id="details" aria-labelledby="details-title"><div class="details-intro"><span class="eyebrow">Q&amp;A</span><h2 id="details-title">Questions, answered.</h2><p>Find what you need at each stage of AI Greenhouse.</p></div><div class="faq-list">
 <section class="faq-group" aria-labelledby="faq-learn"><header><span>01 / EXPLORE</span><h3 id="faq-learn">LEARN</h3></header>
-<details><summary>Who can join LEARN?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>LEARN is open to all JCSV III residents. No coding experience is required.</p></div></details>
+<details><summary>Who can join LEARN?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>LEARN is open to all JCSV III residents. No coding experience is required. Online registration is closed, but walk-ins are welcome at A-303A on 7 October, 8:00–9:30 pm, with priority given to registered participants.</p></div></details>
 <details><summary>Do I need to attend LEARN before joining BUILD?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>No. LEARN is a standalone workshop, and you may apply for BUILD whether or not you attend it.</p></div></details>
 <details><summary>Should I bring anything?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>Bringing a laptop is recommended so you can follow the demonstrations and try things yourself.</p></div></details>
 </section>
@@ -189,7 +169,7 @@
 <details><summary>What can we build?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>Any app or coded project is welcome, provided it produces functioning code that can be demonstrated. For example, a webpage connected to a functioning database would qualify.</p></div></details>
 <details><summary>What should the proposal contain?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>Use the downloadable Markdown template. Sections 1–2 explain the problem, intended users, proposed solution and first working version, within 500 words combined. Sections 3–4 are optional and required only for subsidy consideration, with a separate 500-word limit.</p></div></details>
 <details><summary>What support will participants receive?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>Participants can access co-working sessions, a community of fellow builders, and peer or technical guidance. More activities will begin in late October.</p></div></details>
-<details><summary>How does the AI subscription subsidy work?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>Eligible projects may tentatively receive 100% reimbursement of approved AI subscription expenses, capped at HK$150 per approved individual or team.</p><p>To be considered, complete the optional subsidy sections of the proposal. The team representative must be a Shun Hing College resident and be able to attend Demo Day in person. Subsidy decisions are expected by 19 October. Support is not guaranteed, and valid receipts will be required.</p></div></details>
+<details><summary>How does the AI subscription subsidy work?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>Eligible projects may tentatively receive 100% reimbursement of approved AI subscription expenses, capped at HK$150 per approved individual or team.</p><p>To be considered, complete the optional subsidy sections of the proposal. At least one team member must attend Demo Day in person. Subsidy decisions are expected by 19 October. Support is not guaranteed, and valid receipts will be required.</p></div></details>
 <details><summary>What happens after I apply?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>Applications close on 16 October at 23:59 HKT. Application and matching updates, together with subsidy decisions, are expected by 19 October. Co-working sessions and other BUILD activities will begin in late October.</p></div></details>
 </section>
 <section class="faq-group" aria-labelledby="faq-share"><header><span>03 / CONNECT</span><h3 id="faq-share">SHARE</h3></header>
@@ -199,7 +179,7 @@
 </section>
 </div></section>
 </main>
-<footer class="wrap"><div><a class="footer-brand" href="#">AI Greenhouse.</a><p>An initiative by SHC Tech Club<br>Shun Hing College · JCSV III</p></div><div><span class="mini-label">LET’S TALK</span><a class="footer-email" href="mailto:shctechclub@gmail.com">shctechclub@gmail.com <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><p>Last Updated · 6 October 2026</p></div></footer>
+<footer class="wrap"><div><a class="footer-brand" href="#">AI Greenhouse.</a><p>An initiative by SHC Tech Club<br>Shun Hing College · JCSV III</p></div><div><span class="mini-label">LET’S TALK</span><a class="footer-email" href="mailto:shctechclub@gmail.com">shctechclub@gmail.com <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><p>Last Updated · 7 October 2026</p></div></footer>
 <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"685a6006e4784b3b8c5557b9691d291f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
