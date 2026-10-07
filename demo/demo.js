@@ -1,7 +1,6 @@
 "use strict";
 (() => {
   const INITIAL_VOTES = 10;
-  const MAX_DIALOGS = 5;
   const detailsCopy = {
     learn: {
       kicker: "01 / EXPLORE",
@@ -52,14 +51,10 @@
     document.body.classList.add("demo-modal-open");
     const closeButton = modal.querySelector("[data-demo-close]");
     closeButton.addEventListener("click", () => {
-      // DEBUG BUG 1: Close creates another modal instead of closing it
-      const openCount = document.querySelectorAll(".demo-modal").length;
-      if (openCount >= MAX_DIALOGS) {
-        closeButton.textContent = "Too many dialogs!";
-        return;
+      modal.remove();
+      if (!document.querySelector(".demo-modal")) {
+        document.body.classList.remove("demo-modal-open");
       }
-      const clone = modal.cloneNode(true);
-      presentModal(clone, openCount);
     });
     closeButton.focus();
   };
@@ -74,18 +69,14 @@
     });
   });
 
-  faqItems.forEach((item, index) => {
+  faqItems.forEach((item) => {
     item.querySelector("summary")?.addEventListener("click", (event) => {
       event.preventDefault();
-      // DEBUG BUG 2: FAQ opens the next item instead of the clicked one
-      const wrongIndex = (index + 1) % faqItems.length;
-      const target = faqItems[wrongIndex];
-      target.open = !target.open;
+      item.open = !item.open;
     });
   });
 
   const vote = (button, change) => {
-    // DEBUG BUG 3: Both vote buttons change the count in the opposite direction.
     votes += change;
     renderVotes();
     if (reduceMotion) return;
@@ -101,19 +92,26 @@
     button.append(floater);
     floater.addEventListener("animationend", () => floater.remove());
   };
-  upvoteButton?.addEventListener("click", () => vote(upvoteButton, -1));
-  downvoteButton?.addEventListener("click", () => vote(downvoteButton, 1));
+  upvoteButton?.addEventListener("click", () => vote(upvoteButton, 1));
+  downvoteButton?.addEventListener("click", () => vote(downvoteButton, -1));
+
+  const setDarkMode = (enabled) => {
+    if (enabled) document.documentElement.setAttribute("data-theme", "dark");
+    else document.documentElement.removeAttribute("data-theme");
+    document.body.classList.remove("blackout");
+    themeToggle?.setAttribute("aria-pressed", String(enabled));
+    if (themeToggle) themeToggle.textContent = enabled ? "Light mode" : "Dark mode";
+  };
 
   themeToggle?.addEventListener("click", () => {
-    // DEBUG BUG 4: Dark mode triggers a blackout instead of theme switch
-    document.body.classList.add("blackout");
-    themeToggle.setAttribute("aria-pressed", "true");
+    setDarkMode(document.documentElement.getAttribute("data-theme") !== "dark");
   });
 
   resetButton?.addEventListener("click", () => {
     // Reset all demo demo states
     document.querySelectorAll(".demo-modal, .demo-vote-float").forEach((node) => node.remove());
     document.body.classList.remove("blackout", "demo-modal-open");
+    setDarkMode(false);
     faqItems.forEach((item) => {
       item.open = false;
     });
@@ -122,7 +120,6 @@
     upvoteButton?.classList.remove("is-bounce");
     downvoteButton?.classList.remove("is-bounce");
     voteCount?.classList.remove("is-dropping");
-    themeToggle?.setAttribute("aria-pressed", "false");
   });
 
   renderVotes();
