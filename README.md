@@ -3,7 +3,7 @@ title: "AI Greenhouse Event Page"
 programme: "AI Greenhouse"
 organisation: "SHC Tech Club"
 timezone: "Asia/Hong_Kong (UTC+08:00)"
-last_updated: "2026-10-07T01:08:52+08:00"
+last_updated: "2026-10-07T17:38:09+08:00"
 updated_by: "Carson Ching"
 ---
 
@@ -37,7 +37,7 @@ From this folder, run `python3 -m http.server 4173` and open `http://localhost:4
 
 ## Debug Live Demo practice page
 
-Open `/demo` directly for the Debug Live Demo exercise. The page lives in `demo/index.html`, with its interactions in `demo/demo.js`, page layout in `demo/demo.css`, and shared styling in `styles.css`. It has no entry popup or main-navigation link. The intentionally broken interactions are part of the exercise; Reset Demo restores their starting state.
+Click **Interactive demo** in the LEARN banner to open `/demo/` for the Debug Live Demo exercise, or open that path directly. The page lives in `demo/index.html`, with its interactions in `demo/demo.js`, page layout in `demo/demo.css`, and shared styling in `styles.css`. It has no entry popup or main-navigation link. The intentionally broken interactions are part of the exercise; Reset Demo restores their starting state.
 
 The LEARN workshop-details panel reflects the latest Redesigned guest deck: Plan, Act, Verify, webpage and planner examples, prompting, testing, and privacy. The panel omits presenter names and individual segment times. The overall event time remains 8:00–9:30 pm. See the current deck record in `../Programme/LEARN/Speaker-Materials/`.
 
