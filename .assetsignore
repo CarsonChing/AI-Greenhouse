@@ -2,3 +2,4 @@ worker.js
 wrangler.toml
 .assetsignore
 .wrangler/
+archive/

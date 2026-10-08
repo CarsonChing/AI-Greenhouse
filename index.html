@@ -7,9 +7,9 @@
 <meta name="description" content="AI Greenhouse by SHC Tech Club. Learn to build with AI, develop your idea, and share your progress. Open to all JCSV III residents. No coding experience needed.">
 <title>AI Greenhouse · SHC Tech Club</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23123c2d'/%3E%3Cpath d='M12 28V16l8-7 8 7v12zM20 10v18M12 20h16' fill='none' stroke='%23c8f67a' stroke-width='2'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css?v=20261007-demo-arrow">
-<script src="config.js?v=20261007-walkin" defer></script>
-<script src="site.js?v=20261007-demo-button" defer></script>
+<link rel="stylesheet" href="styles.css?v=20261008-learn-concluded">
+<script src="config.js?v=20261008-learn-concluded" defer></script>
+<script src="site.js?v=20261008-learn-concluded" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -21,7 +21,7 @@
 <details class="registration-menu">
 <summary>Register &amp; apply <svg class="icon icon-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></summary>
 <div class="registration-dropdown">
-<button class="btn btn-secondary" type="button" disabled><span><strong>LEARN</strong><small>Registration closed</small></span></button>
+<button class="btn btn-secondary" type="button" disabled><span><strong>LEARN</strong><small>Concluded · 7 October</small></span></button>
 <div id="build-proposal-menu-action"><a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSetrF7-lV2-c03RsnGoc3B59AE78LMj4_DUhWnRXPhQeQXA1Q/viewform?usp=header"><span><strong>BUILD · With proposal</strong><small>Submit your project idea</small></span></a></div>
 <div id="build-without-proposal-menu-action"><a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSfUpO9frn1dDnDgZPU8wenKv8_XViGmwCPdinsUmmS8X1OshA/viewform?usp=header"><span><strong>BUILD · As an individual</strong><small>Ask to join a team</small></span></a></div>
 <div id="share-presenter-menu-action"><button class="btn btn-secondary" type="button" disabled><span><strong>SHARE · Presenter</strong><small>Registration coming soon</small></span></button></div>
@@ -33,19 +33,7 @@
 <main id="main">
 <section class="hero-carousel" id="hero" aria-label="AI Greenhouse updates" aria-roledescription="carousel" data-carousel>
   <div class="hero-track">
-    <article class="hero hero-learn is-active" aria-labelledby="hero-learn-title" data-carousel-slide>
-      <div class="hero-copy">
-        <p class="eyebrow">LEARN · AI Workshop</p>
-        <h1 id="hero-learn-title">Walk in to LEARN tonight.</h1>
-        <p class="hero-lead">See how people turn ideas into useful prototypes with AI. No coding experience is needed.</p>
-        <p class="hero-meta"><span>7 October · 8–9:30 pm</span><span>A-303A · Shun Hing College</span></p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" type="button" data-learn-modal-open>Workshop details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
-          <button class="btn btn-secondary" type="button" data-demo-url="/demo/">Interactive demo <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
-        </div>
-      </div>
-    </article>
-    <article class="hero hero-build" aria-labelledby="hero-build-title" aria-hidden="true" inert data-carousel-slide>
+    <article class="hero hero-build is-active" aria-labelledby="hero-build-title" data-carousel-slide>
       <div class="hero-copy">
         <p class="eyebrow">BUILD · AI Building Fellowship</p>
         <h1 id="hero-build-title">BUILD applications are open.</h1>
@@ -58,11 +46,22 @@
         </div>
       </div>
     </article>
+    <article class="hero hero-learn" aria-labelledby="hero-learn-title" aria-hidden="true" inert data-carousel-slide>
+      <div class="hero-copy">
+        <p class="eyebrow">LEARN · AI Workshop</p>
+        <h1 id="hero-learn-title">Thank you for joining LEARN.</h1>
+        <p class="hero-lead">Our 7 October workshop has concluded. Take your next step with BUILD, open to all JCSV III residents, whether or not you joined LEARN.</p>
+        <p class="hero-meta"><span>7 October · 8–9:30 pm</span><span>A-303A · Shun Hing College</span></p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" type="button" data-learn-modal-open>Workshop details <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+        </div>
+      </div>
+    </article>
     <button class="carousel-arrow carousel-arrow-prev" type="button" aria-label="Show previous update" data-carousel-prev><span aria-hidden="true">‹</span></button>
     <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Show next update" data-carousel-next><span aria-hidden="true">›</span></button>
     <div class="carousel-dots" aria-label="Choose an update">
-      <button class="carousel-dot is-active" type="button" aria-label="Show LEARN update" aria-current="true" data-carousel-dot="0"></button>
-      <button class="carousel-dot" type="button" aria-label="Show BUILD update" data-carousel-dot="1"></button>
+      <button class="carousel-dot is-active" type="button" aria-label="Show BUILD update" aria-current="true" data-carousel-dot="0"></button>
+      <button class="carousel-dot" type="button" aria-label="Show LEARN update" data-carousel-dot="1"></button>
     </div>
   </div>
 </section>
@@ -71,7 +70,7 @@
     <button class="modal-close" type="button" aria-label="Close LEARN details" data-learn-modal-close><span aria-hidden="true">×</span></button>
     <header class="highlights-head">
       <p class="eyebrow">LEARN · AI Workshop</p>
-      <h2 id="highlights-title" tabindex="-1">Tonight’s programme.</h2>
+      <h2 id="highlights-title" tabindex="-1">Workshop programme.</h2>
     </header>
     <ol class="highlight-list">
       <li>
@@ -101,7 +100,7 @@
       <div><dt>Where</dt><dd>A-303A (Multifunctional Area), Shun Hing College</dd></div>
       <div><dt>Who &amp; language</dt><dd>All JCSV III residents · English · No coding experience needed</dd></div>
     </dl>
-    <p class="highlight-note">Online registration is closed. Walk-ins are welcome, with priority given to registered participants. A laptop is recommended. Stay for mingling after the workshop. Attending LEARN does not commit you to BUILD.</p>
+    <p class="highlight-note">Thank you to everyone who joined LEARN on 7 October. You can apply for BUILD whether or not you attended the workshop.</p>
   </div>
 </dialog>
 <dialog class="highlights" id="build-details-modal" aria-labelledby="build-highlights-title">
@@ -151,16 +150,16 @@
         <div class="section-heading"><h2 id="programme-title">AI GREENHOUSE</h2><p><strong>Three ways to take part.</strong><span>Start with one stage or follow the whole journey.</span></p></div>
 <p class="swipe-hint" aria-hidden="true">Swipe to explore <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></p>
 <div class="stage-grid">
-<article class="stage learn" id="learn"><div class="stage-top"><span>01 / EXPLORE</span><button class="pill pill-action" type="button" aria-haspopup="dialog" aria-controls="learn-details-modal" data-learn-modal-open>See details</button></div><div class="stage-body"><h2>LEARN</h2><h3>AI Workshop</h3><p>See how people turn ideas into useful prototypes with AI. No coding experience is needed.</p><div class="feature-list"><strong>What to expect</strong><ul><li>Plan, Act, Verify with webpage and planner examples</li><li>Prompting, testing, privacy, and audience Q&A</li><li>AI-assisted debugging activity</li><li>A student-built project demo</li></ul></div><dl class="event-facts"><div><dt>When</dt><dd>7 October · 8–9:30 pm</dd></div><div><dt>Where</dt><dd>A-303A · Shun Hing College</dd></div></dl><p class="small-note">Bring a laptop if you can.</p></div><div class="stage-footer"><p class="deadline"><span>Online registration closed</span><strong>Walk-ins welcome</strong></p><div class="stage-actions"><div id="learn-action"><button class="btn btn-secondary" type="button" disabled><span><strong>Registration closed</strong><small>Walk-ins welcome</small></span></button></div><div><button class="btn btn-primary" type="button" data-learn-modal-open><span><strong>Workshop details</strong><small>Programme, time and venue</small></span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button></div></div></div></article>
+<article class="stage learn" id="learn"><div class="stage-top"><span>01 / EXPLORE</span><button class="pill pill-action" type="button" aria-haspopup="dialog" aria-controls="learn-details-modal" data-learn-modal-open>See details</button></div><div class="stage-body"><h2>LEARN</h2><h3>AI Workshop</h3><p>Our 7 October workshop has concluded. Take your next step with BUILD, open to all JCSV III residents, whether or not you joined LEARN.</p><div class="feature-list"><strong>Workshop highlights</strong><ul><li>Plan, Act, Verify with webpage and planner examples</li><li>Prompting, testing, privacy, and audience Q&A</li><li>AI-assisted debugging activity</li><li>A student-built project demo</li></ul></div><dl class="event-facts"><div><dt>When</dt><dd>7 October · 8–9:30 pm</dd></div><div><dt>Where</dt><dd>A-303A · Shun Hing College</dd></div></dl><p class="small-note">Held on 7 October 2026.</p></div><div class="stage-footer"><p class="deadline"><span>7 October 2026</span><strong>Workshop concluded</strong></p><div class="stage-actions"><div id="learn-action"><button class="btn btn-secondary" type="button" disabled><span><strong>Registration closed</strong><small>Concluded · 7 October</small></span></button></div><div><button class="btn btn-primary" type="button" data-learn-modal-open><span><strong>Workshop details</strong><small>Programme, time and venue</small></span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button></div></div></div></article>
 <article class="stage build" id="build"><div class="stage-top"><span>02 / EXPERIMENT</span><button class="pill pill-action" type="button" aria-haspopup="dialog" aria-controls="build-details-modal" data-build-modal-open>See details</button></div><div class="stage-body"><h2>BUILD</h2><h3>AI Building Fellowship</h3><p>Bring an idea, or join a team to build an AI project at your own pace with support when needed.</p><div class="feature-list"><strong>What you get</strong><ul><li>Peer and technical support</li><li>Demo Day opportunity</li><li>Certificate of completion</li><li>AI subscription support for selected teams</li></ul></div><div class="build-template"><p><strong>Proposal template</strong><span>Only needed if you apply with a proposal.</span></p><div id="build-template-action"><a class="btn btn-secondary" href="/download/BUILD_application_template.md"><span><strong>Download proposal template</strong><small>Markdown (.md)</small></span></a></div></div></div><div class="stage-footer"><p class="deadline"><span>Applications close</span><strong>16 October 2026 · 23:59 HKT</strong></p><div class="stage-actions build-actions"><div id="build-proposal-action"><a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSetrF7-lV2-c03RsnGoc3B59AE78LMj4_DUhWnRXPhQeQXA1Q/viewform?usp=header"><span><strong>Apply with a proposal</strong><small>I have a project idea</small></span></a></div><div id="build-without-proposal-action"><a class="btn btn-build" href="https://docs.google.com/forms/d/e/1FAIpQLSfUpO9frn1dDnDgZPU8wenKv8_XViGmwCPdinsUmmS8X1OshA/viewform?usp=header"><span><strong>Apply as an individual</strong><small>I want to join a team</small></span></a></div></div></div></article>
 <article class="stage share" id="share"><div class="stage-top"><span>03 / CONNECT</span><span class="pill pill-disabled" aria-disabled="true">See details</span></div><div class="stage-body"><h2>SHARE</h2><h3>AI Demo Day</h3><p>Show what you made, exchange lessons, and discover other residents’ projects.</p><div class="feature-list"><strong>What to expect</strong><ul><li>A two-hour evening in mid-November</li><li>Casual project demonstrations</li><li>Finished work or progress welcome</li><li>Presenter and audience options</li></ul></div></div><div class="stage-footer"><p class="deadline"><span>Date and programme</span><strong>Coming soon</strong></p><div class="stage-actions share-actions"><div id="share-presenter-action"><button class="btn btn-secondary" type="button" disabled><span><strong>Register as a presenter</strong><small>Coming soon</small></span></button></div><div id="share-audience-action"><button class="btn btn-secondary" type="button" disabled><span><strong>Register as an audience</strong><small>Coming soon</small></span></button></div></div></div></article>
 </div>
 </section>
 <section class="details wrap" id="details" aria-labelledby="details-title"><div class="details-intro"><span class="eyebrow">Q&amp;A</span><h2 id="details-title">Questions, answered.</h2><p>Find what you need at each stage of AI Greenhouse.</p></div><div class="faq-list">
 <section class="faq-group" aria-labelledby="faq-learn"><header><span>01 / EXPLORE</span><h3 id="faq-learn">LEARN</h3></header>
-<details><summary>Who can join LEARN?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>LEARN is open to all JCSV III residents. No coding experience is required. Online registration is closed, but walk-ins are welcome at A-303A on 7 October, 8:00–9:30 pm, with priority given to registered participants.</p></div></details>
-<details><summary>Do I need to attend LEARN before joining BUILD?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>No. LEARN is a standalone workshop, and you may apply for BUILD whether or not you attend it.</p></div></details>
-<details><summary>Should I bring anything?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>Bringing a laptop is recommended so you can follow the demonstrations and try things yourself.</p></div></details>
+<details><summary>Who can join LEARN?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>Held on 7 October 2026, LEARN welcomed all JCSV III residents, with no coding experience required. BUILD applications remain open.</p></div></details>
+<details><summary>Do I need to attend LEARN before joining BUILD?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>No. LEARN is a standalone workshop, and you may apply for BUILD whether or not you attended it.</p></div></details>
+<details><summary>Can I still join the programme?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>Yes. BUILD applications are open, and everyone is welcome to apply, whether or not they attended LEARN.</p></div></details>
 </section>
 <section class="faq-group" aria-labelledby="faq-build"><header><span>02 / EXPERIMENT</span><h3 id="faq-build">BUILD</h3></header>
 <details><summary>What is BUILD, and how much time will it require?<svg class="icon icon-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><div class="answer"><p>BUILD is a supported AI building fellowship. Develop a project at your own pace, with optional co-working activities and peer or technical support when you need it. There is no compulsory weekly schedule.</p></div></details>
@@ -179,7 +178,7 @@
 </section>
 </div></section>
 </main>
-<footer class="wrap"><div><a class="footer-brand" href="#">AI Greenhouse.</a><p>An initiative by SHC Tech Club<br>Shun Hing College · JCSV III</p></div><div><span class="mini-label">LET’S TALK</span><a class="footer-email" href="mailto:shctechclub@gmail.com">shctechclub@gmail.com <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><p>Last Updated · 7 October 2026</p></div></footer>
+<footer class="wrap"><div><a class="footer-brand" href="#">AI Greenhouse.</a><p>An initiative by SHC Tech Club<br>Shun Hing College · JCSV III</p></div><div><span class="mini-label">LET’S TALK</span><a class="footer-email" href="mailto:shctechclub@gmail.com">shctechclub@gmail.com <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><p>Last Updated · 8 October 2026</p></div></footer>
 <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"685a6006e4784b3b8c5557b9691d291f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

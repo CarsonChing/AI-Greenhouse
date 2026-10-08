@@ -86,12 +86,6 @@
     document.querySelectorAll("[data-build-modal-open]").forEach((button) => button.addEventListener("click", () => showBuildPage("build-expectations")));
   }
 
-  document.querySelectorAll("[data-demo-url]").forEach((button) => {
-    button.addEventListener("click", () => {
-      if (!button.disabled) window.location.assign(button.dataset.demoUrl);
-    });
-  });
-
   const carousel = document.querySelector("[data-carousel]");
   if (carousel) {
     const track = carousel.querySelector(".hero-track");
